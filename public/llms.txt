@@ -1,0 +1,18 @@
+# Mustafa Kahraman
+
+> Software engineer and AI consultant based in Istanbul (UTC+3). Works alone with small and growing teams: finds where software and AI save the most time, then designs and builds it end to end. Contact: hello@kahraman.pro
+
+## Services
+- [Custom software](https://kahraman.pro/services/custom-software): web apps, internal tools, backends, APIs and mobile apps, built end to end.
+- [AI agents and AI features](https://kahraman.pro/services/ai-agents): LLM features that work with a team's own data, with a human check where mistakes cost money.
+- [AI consulting](https://kahraman.pro/services/ai-consulting): where AI helps a team and where it does not, with a plan in build order.
+- [Integrations and automation](https://kahraman.pro/services/integrations): stores, apps, CRMs, marketplaces, analytics and payment tools kept in sync.
+- [Rescue and modernisation](https://kahraman.pro/services/fixes): slow pages, broken integrations and old code.
+
+## Work
+- [SetupBook](https://kahraman.pro/work/setupbook): live trading journal with an AI coach (Gemini API), 16 broker integrations, payments and 9 languages. Built solo.
+- [Software for retail brands](https://kahraman.pro/work/retail-ecommerce): stores, backend services, 15+ API integrations and migration of 8 sites to microservices for 15 brands, about 3M monthly visits.
+- [Market Hours](https://kahraman.pro/work/market-hours): live world map of open stock exchanges and forex sessions, with alarms.
+- [Passport.AI](https://kahraman.pro/work/passport-ai): ID and passport photo app with on-device face checks and AI retouching.
+- [Simple Note](https://kahraman.pro/work/simple-note): offline-first note app for iOS, Android and web.
+- [Vocabulary](https://kahraman.pro/work/english-vocabulary): spaced-repetition English vocabulary app in 24 languages.

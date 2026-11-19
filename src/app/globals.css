@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #fafaf4;
+  --color-mint: #d4e6df;
+  --color-ink: #141413;
+  --font-sans: var(--font-geist), "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}

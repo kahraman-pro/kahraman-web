@@ -21,6 +21,9 @@ export function contactHref(subject = "Project inquiry") {
   return `mailto:${site.email}?subject=${encodeURIComponent(subject)}`;
 }
 
+/** Booking links leave the site; email links do not. */
+export const bookingProps = site.bookingUrl ? ({ target: "_blank", rel: "noopener noreferrer" } as const) : {};
+
 export const ctaLabel = () => (site.bookingUrl ? "Book a free 30 minute call" : "Send me a short message");
 
 export const nav = [
@@ -28,7 +31,8 @@ export const nav = [
   { href: "/work", label: "My work" },
   { href: "/#results", label: "Results" },
   { href: "/#process", label: "Process" },
-  { href: "/#about", label: "About" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const stats = [

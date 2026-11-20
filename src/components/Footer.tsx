@@ -13,6 +13,8 @@ export function Footer() {
           <a className={link} href={site.github} target="_blank" rel="noopener noreferrer">GitHub</a>
           <Link className={link} href="/services">Services</Link>
           <Link className={link} href="/work">My work</Link>
+          <Link className={link} href="/about">About</Link>
+          <Link className={link} href="/contact">Contact</Link>
           <Link className={link} href="/privacy">Privacy</Link>
         </nav>
       </div>

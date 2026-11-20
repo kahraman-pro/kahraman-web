@@ -1,5 +1,5 @@
 import { CopyEmail } from "./CopyEmail";
-import { contactHref, ctaLabel, site } from "@/content/site";
+import { bookingProps, contactHref, ctaLabel, site } from "@/content/site";
 import { btnPrimary, h2, lede, wrap } from "@/lib/ui";
 
 type Props = { title?: string; text?: string; subject?: string };
@@ -15,7 +15,7 @@ export function Contact({
         <h2 className={`${h2} mx-auto max-w-[14ch]`}>{title}</h2>
         <p className={`${lede} mx-auto mt-6 max-w-[46ch]`}>{text}</p>
         <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
-          <a className={btnPrimary} href={contactHref(subject)}>{ctaLabel()}</a>
+          <a className={btnPrimary} href={contactHref(subject)} {...bookingProps}>{ctaLabel()}</a>
           <CopyEmail email={site.email} />
         </div>
         <small className="mt-6 block text-[0.8125rem] text-ink/60">

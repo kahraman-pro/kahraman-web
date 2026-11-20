@@ -10,7 +10,7 @@ import {
 // The mobile app shares its account, data and backend with the web app at setupbook.io, so these
 // texts follow the web app's legal documents (setupbook-web: content/legal/*.md) and add the store parts.
 const app: App = {
-  repo: 'setupbook-flutter',
+  repo: 'setupbook-reactnative',
   // The case study (messages/*.json projects[].slug) that links to these documents.
   project: 'setupbook',
   name: 'SetupBook',

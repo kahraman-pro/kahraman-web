@@ -4,7 +4,7 @@ import { Contact } from "@/components/Contact";
 import { LogoMark } from "@/components/Logo";
 import { AiCoachPanel, SpeedPanel, SyncPanel } from "@/components/Panels";
 import { ServiceRows } from "@/components/ServiceRows";
-import { brands, contactHref, ctaLabel, principles, results, site, stats, steps } from "@/content/site";
+import { bookingProps, brands, contactHref, ctaLabel, principles, results, site, stats, steps } from "@/content/site";
 import { pageMetadata } from "@/lib/seo";
 import { btnPrimary, centerHead, h1, h2, h2Split, h3, headP, lede, linkUnderline, section, splitHead, wrap } from "@/lib/ui";
 
@@ -75,7 +75,7 @@ export default function Home() {
             ))}
           </ul>
           <div className="mt-10 flex justify-center">
-            <a className={btnPrimary} href={contactHref()}>{ctaLabel()}</a>
+            <a className={btnPrimary} href={contactHref()} {...bookingProps}>{ctaLabel()}</a>
           </div>
         </div>
       </section>

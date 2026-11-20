@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LogoMark } from "./Logo";
-import { contactHref, nav, site } from "@/content/site";
+import { bookingProps, contactHref, nav, site } from "@/content/site";
 import { btnPrimary, btnPrimarySm, wrap } from "@/lib/ui";
 
 export function Header() {
@@ -48,8 +48,8 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden md:block">
-          <a href="/#contact" className={btnPrimarySm}>
-            Get in touch
+          <a href={contactHref()} {...bookingProps} className={btnPrimarySm}>
+            {site.bookingUrl ? "Book a call" : "Get in touch"}
           </a>
         </div>
         <button
@@ -72,8 +72,8 @@ export function Header() {
             {item.label}
           </Link>
         ))}
-        <a href={contactHref()} className={`${btnPrimary} mt-5`}>
-          Get in touch
+        <a href={contactHref()} {...bookingProps} className={`${btnPrimary} mt-5`}>
+          {site.bookingUrl ? "Book a free 30 minute call" : "Get in touch"}
         </a>
       </nav>
     </header>

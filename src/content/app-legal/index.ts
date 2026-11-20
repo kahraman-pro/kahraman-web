@@ -2,7 +2,7 @@ import type { App, LegalDoc } from './shared';
 import englishVocabulary from './english-vocabulary-words-flutter';
 import marketHours from './market-hours-forex-stocks-flutter';
 import passportIdPhoto from './passport-id-photo-flutter';
-import setupbook from './setupbook-flutter';
+import setupbook from './setupbook-reactnative';
 import simpleNote from './simple-note-flutter';
 
 // The documents every mobile app gets, keyed by their URL segment: /<doc>/<repo>.

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import { Header } from "@/components/Header";
+import { WebMcp } from "@/components/WebMcp";
 import { Footer } from "@/components/Footer";
 import { site } from "@/content/site";
 import { env } from "@/lib/env";
@@ -69,6 +70,25 @@ const graph = {
       sameAs: [site.linkedin, site.github],
     },
     {
+      "@type": "Organization",
+      "@id": `${site.url}/#organization`,
+      name: site.name,
+      legalName: site.name,
+      url: site.url,
+      logo: { "@type": "ImageObject", url: `${site.url}/brand/mk-app-icon.png` },
+      email: site.email,
+      founder: { "@id": `${site.url}/#person` },
+      address: { "@type": "PostalAddress", addressLocality: "Istanbul", addressCountry: "TR" },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        email: site.email,
+        availableLanguage: ["English", "Turkish"],
+        ...(site.bookingUrl ? { url: site.bookingUrl } : {}),
+      },
+      sameAs: [site.linkedin, site.github],
+    },
+    {
       "@type": "ProfessionalService",
       "@id": `${site.url}/#service`,
       name: `${site.name}, Software and AI Consulting`,
@@ -105,6 +125,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <WebMcp />
         <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(graph)} />
       </body>
     </html>

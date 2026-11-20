@@ -24,6 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         images: [p.cover, ...p.gallery.map((g) => g.src)].filter((src): src is string => Boolean(src)).map(absoluteUrl),
       }),
     ),
+    page("/about", 0.6, "monthly"),
+    page("/contact", 0.6, "monthly"),
     page("/privacy", 0.2, "yearly"),
     // The app documents carry a real "last updated" date.
     ...APPS.flatMap((app) =>

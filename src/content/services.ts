@@ -31,9 +31,9 @@ export const services: Service[] = [
     ],
     buildsLede: "Production software, built by one engineer who owns the whole result.",
     builds: [
-      { title: "Web apps and SaaS products", text: "Customer portals, dashboards and full products, from the first screen to payments and many languages." },
+      { title: "Web apps and SaaS products", text: "Customer portals, dashboards and full products in Next.js and React, from the first screen to login, payments, many languages and cloud setup on Google Cloud and Firebase." },
       { title: "Internal tools", text: "One tool for the job your team does by hand, on your data, owned by you." },
-      { title: "Backends and APIs", text: "Services, data processing and APIs that stay up on the busiest day of the year." },
+      { title: "Backends and APIs", text: "Services, data processing and APIs in Python, Node.js or C# that stay up on the busiest day of the year." },
       { title: "Mobile apps", text: "iOS and Android apps from one codebase, with offline use, notifications and in-app purchases." },
       { title: "Online stores", text: "Stores built for campaign days, with speed and search ranking treated as features." },
       { title: "Architecture and migrations", text: "Old systems moved step by step to a modern setup, as with 8 brand sites moved to a microservice-based architecture." },
@@ -45,9 +45,9 @@ export const services: Service[] = [
   {
     slug: "ai-agents",
     title: "AI agents and AI features that work with your own data.",
-    short: "Assistants that answer from your database, helpers that sort and tag records, reports written by AI. Small, safe jobs, with a person checking.",
+    short: "Assistants and chatbots that answer from your own data, helpers that sort and tag records, agents that take real actions, reports written by AI. With a person checking where a mistake costs money.",
     intro:
-      "Most teams do not need a big AI project. They need one job done faster: an answer found, a record tagged, a report written. I build LLM features that do those small jobs on your own data, and I add a human check where a mistake would cost money.",
+      "Most teams do not need a big AI project. They need one job done faster: an answer found, a record tagged, a report written, a task done in your tools. I build LLM features and agents that do those jobs on your own data, and I add a human check where a mistake would cost money.",
     painsTitle: "Where the hours go.",
     painsLede: "None of this needs a person. It just needs someone to connect the AI to the right data.",
     pains: [
@@ -60,16 +60,16 @@ export const services: Service[] = [
     ],
     buildsLede: "Each one runs on your own data, with clear limits on what the AI can and cannot do.",
     builds: [
-      { title: "An assistant for your data", text: "Ask a question in plain words and get the answer from your own database, with the numbers it used." },
-      { title: "Sort and tag helpers", text: "AI suggests tags, categories or priorities for new records. A person confirms with one click." },
+      { title: "Chatbots and search on your documents", text: "Ask in plain words and get the answer from your own documents or database, with the source or the numbers it used, so you can check every answer. Built with embeddings and a vector database, and tested on real questions." },
+      { title: "Sort and tag helpers", text: "AI suggests tags, categories or priorities for new records, and plans the day, as in SetupBook's Setup AI. A person confirms with one click." },
       { title: "Weekly reports by AI", text: "A written review of the week from your real numbers, ready before the team starts." },
-      { title: "Daily planning helpers", text: "Small AI helpers that review the day and plan the next one, as in SetupBook's Setup AI." },
-      { title: "Safe limits", text: "The AI reads and suggests. Anything that costs money waits for a person's yes." },
-      { title: "Model choice that fits", text: "Gemini, Claude or another model, chosen for the job and the budget, not for the hype." },
+      { title: "Agents that take real actions", text: "Agents that call your tools and get the job done, built with tool calling, LangGraph or LangChain. Anything that costs money waits for a person's yes." },
+      { title: "MCP servers", text: "Connect Claude to your own data and apps, so your team asks in plain words and the AI works with the real systems." },
+      { title: "Model choice that fits", text: "Claude, OpenAI, Gemini or another model, chosen for the job and the budget, not for the hype. Built in Python or Node.js." },
     ],
     related: ["setupbook", "passport-ai"],
     metaDescription:
-      "AI agents and AI features built on your own data: assistants, tagging helpers and AI-written reports, with a human check where it matters.",
+      "AI agents, chatbots and AI features built on your own data: answers with sources, tagging helpers, AI-written reports and MCP servers, with a human check where it matters.",
   },
   {
     slug: "ai-consulting",
@@ -103,9 +103,9 @@ export const services: Service[] = [
   {
     slug: "integrations",
     title: "Integrations and automation that keep your systems in sync.",
-    short: "Your store, app, CRM, marketplaces, analytics and payment tools connected, so data moves on its own and your team stops copying it.",
+    short: "Your store, app, CRM, email, databases, spreadsheets, marketplaces, analytics and payment tools connected, so data moves on its own and your team stops copying it.",
     intro:
-      "When your tools do not talk to each other, your team does the talking: copying orders, updating prices, exporting reports. I connect them. I have integrated 15+ third-party APIs for retail brands and synced trades from 16 platforms into my own product, so I know where integrations break and how to make them fail loudly instead of quietly.",
+      "When your tools do not talk to each other, your team does the talking: copying orders, updating prices, exporting reports. I connect them, in Python or Node.js first. I have integrated 15+ third-party APIs for retail brands and synced trades from 16 platforms into my own product, so I know where integrations break and how to make them fail loudly instead of quietly.",
     painsTitle: "Where your team becomes the integration.",
     painsLede: "Copy and paste between tools is the most expensive job nobody has on their job description.",
     pains: [
@@ -118,45 +118,45 @@ export const services: Service[] = [
     ],
     buildsLede: "Integrations on the systems you already use, with problems flagged instead of hidden.",
     builds: [
-      { title: "System-to-system sync", text: "Orders, stock, customers and prices kept the same across every tool you use." },
-      { title: "Marketplaces and sales channels", text: "Your store connected to the marketplaces and platforms you sell on." },
+      { title: "Two-way sync", text: "Orders, stock, customers and prices kept the same across your CRM, databases, spreadsheets and every other tool, through APIs and webhooks." },
+      { title: "Marketplaces and sales channels", text: "Your store connected to the marketplaces and platforms you sell on, with XML or JSON feeds where they need them." },
       { title: "Analytics and tracking", text: "Sales and campaign data that reaches your dashboards in real time, not next week." },
-      { title: "CRM, email and messaging", text: "Leads and customers in your CRM as they happen, and campaign tools your team runs without a developer." },
+      { title: "CRM, email and messaging", text: "Leads and customers in your CRM and email tools as they happen, and campaign tools your team runs without a developer." },
       { title: "Payments and subscriptions", text: "Checkouts and subscriptions connected to the rest of your systems and tested end to end." },
       { title: "Monitoring and alerts", text: "Every sync watched, with a clear alert when something fails instead of silent bad data." },
     ],
     related: ["retail-ecommerce", "setupbook"],
     metaDescription:
-      "Integrations and automation: store, app, CRM, marketplaces, analytics and payment tools connected, with failures flagged instead of hidden.",
+      "Integrations and automation: store, app, CRM, email, databases, marketplaces, analytics and payment tools kept in sync, with failures flagged instead of hidden.",
   },
   {
     slug: "fixes",
     title: "Rescue and modernisation of existing software.",
-    short: "Slow pages, broken integrations and old sites that need a newer setup. I find the cause, fix it and write down what I changed.",
+    short: "A workflow that stopped, an agent that gives wrong answers, a slow page, a prototype with no logs or an old site. I find the cause, fix it and write down what I changed.",
     intro:
-      "Not every problem needs a new build. Often the fastest win is fixing what you have: a page that loads too slowly, an integration that fails at night, an old site on a setup nobody wants to touch. I read the code, find the cause, fix it and leave short notes so it stays fixed.",
+      "Not every problem needs a new build. Often the fastest win is fixing what you have: a workflow that stopped, an agent that gives wrong answers, a page that loads too slowly, a prototype with no logs and no error handling, an old site on a setup nobody wants to touch. I read the code, find the cause, fix it, add logs, retries and alerts, and leave short notes so it stays fixed.",
     painsTitle: "Problems that cost more every month.",
     painsLede: "Old code does not get cheaper to fix. Every month it waits, more work is built on top of it.",
     pains: [
       { title: "A slow store", text: "Mobile visitors wait for images and scripts that load before the product." },
-      { title: "Night-time failures", text: "A sync job fails at 3 am and someone fixes the data by hand in the morning." },
+      { title: "A workflow that stopped", text: "A sync or automation fails at 3 am and someone fixes the data by hand in the morning." },
       { title: "An old framework", text: "The site runs on a version nobody updates, and every change risks breaking it." },
       { title: "No one knows how it works", text: "The developer left, the notes did not exist and the team is afraid to touch it." },
-      { title: "Errors nobody sees", text: "Customers hit errors that never reach a log or an alert." },
-      { title: "Half-finished AI code", text: "AI-written code was shipped without tests and now behaves in strange ways." },
+      { title: "An agent that gives wrong answers", text: "The AI answers with confidence, but the answers are wrong, and nobody can see why." },
+      { title: "A prototype with no safety net", text: "A demo or AI-written code went live with no logs, no error handling and no tests, and now it behaves in strange ways." },
     ],
     buildsLede: "A clear diagnosis first, then the fix, then notes your team can read.",
     builds: [
       { title: "Speed audit and fix", text: "Core Web Vitals, images, scripts and rendering, measured before and after." },
-      { title: "Integration repair", text: "Broken connections found, fixed and given alerts." },
+      { title: "Workflow and agent repair", text: "Stopped workflows, broken integrations and agents with wrong answers found, fixed and given logs, retries and alerts." },
       { title: "Move to a newer setup", text: "Old sites moved step by step to a modern, component-based stack." },
       { title: "Code review", text: "A read of your code with a list of real risks, in order of what to fix first." },
-      { title: "AI code check", text: "AI-written code read, tested and cleaned up before it costs you." },
-      { title: "Short notes", text: "Every fix comes with notes on what changed and why." },
+      { title: "Prototype to production", text: "A prototype or AI-written code read, tested and given logs and error handling before it costs you." },
+      { title: "Short notes", text: "Every fix comes with notes in plain English on what changed and why." },
     ],
     related: ["retail-ecommerce", "market-hours"],
     metaDescription:
-      "Fixes for existing code: slow pages, broken integrations and old sites that need a newer setup, with notes your team can read.",
+      "Fixes for existing software: stopped workflows, agents with wrong answers, slow pages, prototypes with no logs and old sites, with notes your team can read.",
   },
 ];
 

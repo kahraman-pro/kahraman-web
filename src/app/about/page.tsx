@@ -32,6 +32,17 @@ export default function AboutPage() {
             I am not tied to one language or framework. I pick the tools that fit your job and your team, and I use AI every
             day to build faster, while checking and testing everything myself before it reaches you.
           </p>
+          <p className="mb-4">
+            I work mostly with small and medium teams. My main industries are retail and e-commerce (15 brands) and trading and
+            finance (my own AI product). I also work with teams in marketing, sales, support and operations.
+          </p>
+          <p className="mb-4">
+            Tools I use: Python, FastAPI, Node.js, TypeScript, C#, REST APIs, webhooks, Claude, Claude Code, OpenAI, Gemini,
+            LangChain, LangGraph, MCP, vector databases, Next.js, React, Flutter, Google Cloud and Firebase.
+          </p>
+          <p className="mb-4">
+            I am in {site.location} ({site.timezone}). English is my second language, so I keep my messages short and clear.
+          </p>
           <p>
             See <Link className={linkUnderline} href="/services">what I build</Link> and <Link className={linkUnderline} href="/work">my work</Link>.
           </p>

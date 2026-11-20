@@ -1,13 +1,13 @@
 # Mustafa Kahraman
 
-> Software engineer and AI consultant based in Istanbul (UTC+3). Works alone with small and growing teams: finds where software and AI save the most time, then designs and builds it end to end. Contact: hello@kahraman.pro
+> Software engineer and AI consultant based in Istanbul (UTC+3). Works alone with small and medium teams: finds where software and AI save the most time, then designs and builds it end to end. Contact: hello@kahraman.pro
 
 ## Services
 - [Custom software](https://kahraman.pro/services/custom-software): web apps, internal tools, backends, APIs and mobile apps, built end to end.
-- [AI agents and AI features](https://kahraman.pro/services/ai-agents): LLM features that work with a team's own data, with a human check where mistakes cost money.
+- [AI agents and AI features](https://kahraman.pro/services/ai-agents): agents, chatbots (RAG), MCP servers and LLM features that work with a team's own data, with a human check where mistakes cost money.
 - [AI consulting](https://kahraman.pro/services/ai-consulting): where AI helps a team and where it does not, with a plan in build order.
-- [Integrations and automation](https://kahraman.pro/services/integrations): stores, apps, CRMs, marketplaces, analytics and payment tools kept in sync.
-- [Rescue and modernisation](https://kahraman.pro/services/fixes): slow pages, broken integrations and old code.
+- [Integrations and automation](https://kahraman.pro/services/integrations): stores, apps, CRMs, email, databases, marketplaces, analytics and payment tools kept in sync.
+- [Rescue and modernisation](https://kahraman.pro/services/fixes): stopped workflows, agents with wrong answers, slow pages, prototypes with no logs and old code.
 
 ## Work
 - [SetupBook](https://kahraman.pro/work/setupbook): live trading journal with an AI coach (Gemini API), 16 broker integrations, payments and 9 languages. Built solo.

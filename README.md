@@ -37,10 +37,10 @@ I work alone, so you talk to me directly and I do the work myself. No account ma
 | Service | What you get |
 | --- | --- |
 | [**Custom software**](https://kahraman.pro/services/custom-software) | Web apps, internal tools, backends, APIs and mobile apps, designed and built end to end. |
-| [**AI agents and AI features**](https://kahraman.pro/services/ai-agents) | LLM features that answer from your own data, sort and tag records and write reports, with a person checking where a mistake would cost money. |
+| [**AI agents and AI features**](https://kahraman.pro/services/ai-agents) | Agents, chatbots and MCP servers that answer from your own data, sort and tag records and write reports, with a person checking where a mistake would cost money. |
 | [**AI consulting**](https://kahraman.pro/services/ai-consulting) | A clear view of where AI helps your team and where it does not, and a plan in the order to build it. |
-| [**Integrations and automation**](https://kahraman.pro/services/integrations) | Your store, app, CRM, marketplaces, analytics and payment tools kept in sync, with failures flagged instead of hidden. |
-| [**Rescue and modernisation**](https://kahraman.pro/services/fixes) | Slow pages, broken integrations and old code found, fixed and documented. |
+| [**Integrations and automation**](https://kahraman.pro/services/integrations) | Your store, app, CRM, email, databases, marketplaces, analytics and payment tools kept in sync, with failures flagged instead of hidden. |
+| [**Rescue and modernisation**](https://kahraman.pro/services/fixes) | Stopped workflows, agents with wrong answers, slow pages, prototypes with no logs and old code found, fixed and documented. |
 
 ## Selected work
 

@@ -1,13 +1,14 @@
+import { env } from "@/lib/env";
+
 export const site = {
   name: "Mustafa Kahraman",
   shortName: "Kahraman",
-  url: "https://kahraman.pro",
+  url: env.siteUrl,
   role: "Software engineer and AI consultant",
   location: "Istanbul",
   timezone: "UTC+3",
   email: "hello@kahraman.pro",
-  // Put a Calendly / Cal.com link here to turn every "Book a call" button into a booking link.
-  bookingUrl: "" as string,
+  bookingUrl: env.bookingUrl,
   linkedin: "https://www.linkedin.com/in/mustafa--kahraman",
   github: "https://github.com/kahramanX",
   title: "Software Engineer and AI Consultant, Mustafa Kahraman",

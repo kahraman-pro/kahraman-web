@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { site } from "@/content/site";
+import { env } from "@/lib/env";
 import { jsonLd } from "@/lib/seo";
 import "./globals.css";
 
@@ -23,10 +24,11 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
   },
-  // Search console verification: set these in the hosting environment; unset values emit no tag.
+  // Search console verification from the environment; unset values emit no tag.
+  // public/google4e5b42ef971a8daa.html verifies Google by the file method as well.
   verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION,
-    ...(process.env.BING_SITE_VERIFICATION ? { other: { "msvalidate.01": process.env.BING_SITE_VERIFICATION } } : {}),
+    google: env.googleVerification,
+    ...(env.bingVerification ? { other: { "msvalidate.01": env.bingVerification } } : {}),
   },
   openGraph: { type: "website", siteName: site.name, locale: "en_US" },
   twitter: { card: "summary_large_image" },

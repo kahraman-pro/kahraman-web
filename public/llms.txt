@@ -1,6 +1,6 @@
 # Mustafa Kahraman
 
-> Software engineer and AI consultant based in Istanbul (UTC+3). Works alone with small and medium teams: finds where software and AI save the most time, then designs and builds it end to end. Contact: hello@kahraman.pro
+> Software engineer and AI consultant based in İzmir, Türkiye (UTC+3). Works alone with small and medium teams: finds where software and AI save the most time, then designs and builds it end to end. Contact: hello@kahraman.pro
 
 ## Services
 - [Custom software](https://kahraman.pro/services/custom-software): web apps, internal tools, backends, APIs and mobile apps, built end to end.

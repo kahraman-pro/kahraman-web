@@ -53,7 +53,7 @@ const graph = {
       url: site.url,
       email: `mailto:${site.email}`,
       jobTitle: "Software engineer and AI consultant",
-      description: "Software engineer and AI consultant in Istanbul who designs and builds software, AI features and integrations for small and growing teams.",
+      description: "Software engineer and AI consultant in İzmir, Türkiye who designs and builds software, AI features and integrations for small and medium teams.",
       knowsLanguage: ["en", "tr"],
       knowsAbout: [
         "Software engineering",
@@ -66,7 +66,7 @@ const graph = {
         "System integrations",
         "Web performance",
       ],
-      address: { "@type": "PostalAddress", addressLocality: "Istanbul", addressCountry: "TR" },
+      address: { "@type": "PostalAddress", addressLocality: "İzmir", addressCountry: "TR" },
       sameAs: [site.linkedin, site.github],
     },
     {
@@ -78,7 +78,7 @@ const graph = {
       logo: { "@type": "ImageObject", url: `${site.url}/brand/mk-app-icon.png` },
       email: site.email,
       founder: { "@id": `${site.url}/#person` },
-      address: { "@type": "PostalAddress", addressLocality: "Istanbul", addressCountry: "TR" },
+      address: { "@type": "PostalAddress", addressLocality: "İzmir", addressCountry: "TR" },
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer service",
@@ -97,7 +97,7 @@ const graph = {
       description: "Software and AI consulting: custom software, AI agents, integrations and AI strategy for small and growing teams, designed and built by one engineer.",
       founder: { "@id": `${site.url}/#person` },
       areaServed: "Worldwide",
-      address: { "@type": "PostalAddress", addressLocality: "Istanbul", addressCountry: "TR" },
+      address: { "@type": "PostalAddress", addressLocality: "İzmir", addressCountry: "TR" },
       image: `${site.url}/opengraph-image`,
       priceRange: "$$",
     },

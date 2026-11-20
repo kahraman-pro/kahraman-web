@@ -7,7 +7,7 @@ import { crumbs, h1Page, lede, linkUnderline, pageHero, section, wrap } from "@/
 
 export const metadata: Metadata = pageMetadata({
   title: "About",
-  description: "Mustafa Kahraman is a software engineer and AI consultant in Istanbul who designs and builds software, AI features and integrations himself, end to end.",
+  description: "Mustafa Kahraman is a software engineer and AI consultant in İzmir, Türkiye who designs and builds software, AI features and integrations himself, end to end.",
   path: "/about",
 });
 

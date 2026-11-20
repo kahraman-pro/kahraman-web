@@ -8,7 +8,7 @@
 
 **Software and AI, built for how your team works.**
 
-The website of [Mustafa Kahraman](https://kahraman.pro), a software engineer and AI consultant in Istanbul.
+The website of [Mustafa Kahraman](https://kahraman.pro), a software engineer and AI consultant in İzmir, Türkiye.
 I find where software and AI save a team the most time, then design and build it myself, end to end.
 
 [**Visit kahraman.pro →**](https://kahraman.pro) &nbsp;·&nbsp; [Services](https://kahraman.pro/services) &nbsp;·&nbsp; [My work](https://kahraman.pro/work) &nbsp;·&nbsp; [hello@kahraman.pro](mailto:hello@kahraman.pro)

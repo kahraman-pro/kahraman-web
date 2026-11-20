@@ -5,7 +5,7 @@ export const site = {
   shortName: "Kahraman",
   url: env.siteUrl,
   role: "Software engineer and AI consultant",
-  location: "Istanbul",
+  location: "İzmir, Türkiye",
   timezone: "UTC+3",
   email: "hello@kahraman.pro",
   bookingUrl: env.bookingUrl,
@@ -13,7 +13,7 @@ export const site = {
   github: "https://github.com/kahramanX",
   title: "Software Engineer and AI Consultant, Mustafa Kahraman",
   description:
-    "Software engineer and AI consultant in Istanbul. I find where software and AI save your team the most time, then design and build it end to end.",
+    "Software engineer and AI consultant in İzmir, Türkiye. I find where software and AI save your team the most time, then design and build it end to end.",
 };
 
 export function contactHref(subject = "Project inquiry") {

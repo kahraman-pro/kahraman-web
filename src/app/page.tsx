@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Contact } from "@/components/Contact";
-import { LogoMark } from "@/components/Logo";
 import { AiCoachPanel, SpeedPanel, SyncPanel } from "@/components/Panels";
 import { ServiceRows } from "@/components/ServiceRows";
 import { bookingProps, brands, contactHref, ctaLabel, principles, results, site, stats, steps } from "@/content/site";
@@ -147,9 +147,14 @@ export default function Home() {
         <div className={wrap}>
           <div className="grid gap-10 rounded-3xl border border-ink/10 bg-mint p-7 sm:p-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16 lg:p-14">
             <div>
-              <div className="mb-7 grid size-36 place-items-center rounded-[18px] bg-ink text-mint sm:size-[164px]" aria-hidden="true">
-                <LogoMark className="h-auto w-[92px]" />
-              </div>
+              <Image
+                src="/brand/mustafa-kahraman.webp"
+                alt="Mustafa Kahraman smiling on a wooden balcony at sunset"
+                width={900}
+                height={1125}
+                sizes="(min-width: 640px) 220px, 160px"
+                className="mb-7 aspect-[4/5] w-40 rounded-[18px] object-cover sm:w-[220px]"
+              />
               <h2 className={`${h2Split} mb-8`}>Who you work with.</h2>
               <b className="block text-[1.1rem] font-medium">{site.name}</b>
               <span className="text-[0.8125rem] text-ink/60">{site.role}, {site.location}</span>

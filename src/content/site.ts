@@ -22,9 +22,12 @@ export function contactHref(subject = "Project inquiry") {
 }
 
 /** Booking links leave the site; email links do not. */
-export const bookingProps = site.bookingUrl ? ({ target: "_blank", rel: "noopener noreferrer" } as const) : {};
+export const bookingProps = site.bookingUrl
+  ? ({ target: "_blank", rel: "noopener noreferrer" } as const)
+  : {};
 
-export const ctaLabel = () => (site.bookingUrl ? "Book a free 30 minute call" : "Send me a short message");
+export const ctaLabel = () =>
+  site.bookingUrl ? "Book a free 30 minute call" : "Send me a short message";
 
 export const nav = [
   { href: "/services", label: "Services" },
@@ -36,10 +39,10 @@ export const nav = [
 ];
 
 export const stats = [
-  { value: "2021", label: "Building software since" },
-  { value: "15+", label: "Brands built for" },
-  { value: "3M", label: "Monthly visits served" },
-  { value: "5", label: "Own products built" },
+  { value: "3M", label: "Monthly visits across the sites" },
+  { value: "50K+", label: "Products synced to sales and ad channels" },
+  { value: "1M+", label: "Members on one platform" },
+  { value: "$20K+", label: "Average daily sales on one store" },
 ];
 
 export const brands = [
@@ -76,8 +79,8 @@ export const principles = [
 
 export const results = [
   {
-    value: "3.8 s → 1.5 s",
-    text: "Largest Contentful Paint on a retail brand's store, after rendering and Core Web Vitals work. Mobile Lighthouse went from 52 to 86.",
+    value: "3.8 s → 0.5 s",
+    text: "Largest Contentful Paint on a retail brand's store, after rendering and Core Web Vitals work. Mobile Lighthouse went from 52 to 95.",
     who: "Retail ecommerce, Istanbul",
   },
   {
@@ -87,7 +90,7 @@ export const results = [
   },
   {
     value: "1 person",
-    text: "SetupBook, from idea to live product: AI coach, 16 platform integrations, payments and 9 languages, designed and built alone.",
+    text: "SetupBook, from idea to live product: AI coach, 16 platform integrations, payments and 9 languages and designed .",
     who: "SetupBook, live at setupbook.io",
   },
 ];

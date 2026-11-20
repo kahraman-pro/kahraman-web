@@ -70,8 +70,8 @@ export default function Home() {
           </p>
           <ul className="mx-auto mt-12 grid max-w-[760px] grid-cols-2 gap-x-6 gap-y-7 sm:grid-cols-4">
             {stats.map((s) => (
-              <li key={s.label} className="flex flex-col-reverse items-center">
-                <span className="text-[0.8125rem] text-ink/60">{s.label}</span>
+              <li key={s.label} className="flex flex-col-reverse items-center justify-end">
+                <span className="mt-1 max-w-[20ch] text-balance text-center text-[0.8125rem] leading-snug text-ink/60">{s.label}</span>
                 <strong className="text-[clamp(1.8rem,3vw,2.3rem)] font-normal leading-[1.2] tracking-[-0.04em]">{s.value}</strong>
               </li>
             ))}
@@ -84,7 +84,7 @@ export default function Home() {
 
       {/* Brands */}
       <section aria-label="Brands" className="pb-5 pt-10">
-        <p className="mb-6 text-center text-[0.8125rem] text-ink/60">Brands I have built software for</p>
+        <p className="mb-6 text-center text-[0.8125rem] text-ink/60">15+ brands I have built software for</p>
         <ul className={`${wrap} flex max-w-[1000px] flex-wrap justify-center gap-x-9 gap-y-2.5`}>
           {brands.map((b) => (
             <li key={b} className="whitespace-nowrap text-[1.05rem] font-medium tracking-[-0.02em] text-ink/80 sm:text-[1.15rem]">{b}</li>

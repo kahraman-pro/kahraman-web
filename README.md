@@ -121,9 +121,43 @@ Read in one place, [`src/lib/env.ts`](src/lib/env.ts). See [`.env.example`](.env
 The **MK** monogram is drawn as one line: the right leg of the M is also the stem of the K. Logo files in light, dark and transparent versions are in [`public/brand`](public/brand).
 
 <p>
-  <img src="public/brand/mk-app-icon.png" alt="MK monogram app icon" width="96" />
+  <img src="public/brand/mk-app-icon.png" alt="MK app icon" height="88" />
   &nbsp;
-  <img src="public/brand/mustafa-kahraman-lockup-on-black.png" alt="Mustafa Kahraman logo on black" width="240" />
+  <img src="public/brand/mk-profile-photo.png" alt="MK profile photo" height="88" />
+  &nbsp;
+  <img src="public/brand/mk-mark-on-black.png" alt="MK mark on black" height="88" />
+  &nbsp;
+  <img src="public/brand/mk-mark-on-cream.png" alt="MK mark on cream" height="88" />
+  &nbsp;
+  <img src="public/brand/mk-mark-on-mint.png" alt="MK mark on mint" height="88" />
+  &nbsp;
+  <img src="public/brand/mk-mark-black.png" alt="MK mark black" height="88" />
+  &nbsp;
+  <img src="public/brand/mk-mark-white.png" alt="MK mark white" height="88" />
+</p>
+
+<p>
+  <img src="public/brand/mustafa-kahraman-stacked-on-black.png" alt="Mustafa Kahraman stacked on black" height="120" />
+  &nbsp;
+  <img src="public/brand/mustafa-kahraman-stacked-on-cream.png" alt="Mustafa Kahraman stacked on cream" height="120" />
+  &nbsp;
+  <img src="public/brand/mustafa-kahraman-lockup-on-black.png" alt="Mustafa Kahraman lockup on black" height="120" />
+  &nbsp;
+  <img src="public/brand/mustafa-kahraman-lockup-on-white.png" alt="Mustafa Kahraman lockup on white" height="120" />
+  &nbsp;
+  <img src="public/brand/mustafa-kahraman-lockup-black.png" alt="Mustafa Kahraman lockup black" height="88" />
+  &nbsp;
+  <img src="public/brand/mustafa-kahraman-lockup-white.png" alt="Mustafa Kahraman lockup white" height="88" />
+</p>
+
+<p>
+  <img src="public/brand/mustafa-kahraman-horizontal-on-black.png" alt="Mustafa Kahraman horizontal on black" height="68" />
+  &nbsp;
+  <img src="public/brand/mustafa-kahraman-horizontal-on-cream.png" alt="Mustafa Kahraman horizontal on cream" height="68" />
+  &nbsp;
+  <img src="public/brand/mustafa-kahraman-horizontal-black.png" alt="Mustafa Kahraman horizontal black" height="52" />
+  &nbsp;
+  <img src="public/brand/mustafa-kahraman-horizontal-white.png" alt="Mustafa Kahraman horizontal white" height="52" />
 </p>
 
 ---

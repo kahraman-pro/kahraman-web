@@ -16,13 +16,13 @@ export default function AboutPage() {
     <>
       <section className={pageHero}>
         <div className={wrap}>
-          <div className={crumbs}><Link className="cursor-pointer hover:text-ink" href="/">Home</Link><span>/</span><span>About</span></div>
+          <div className={crumbs}><Link className="cursor-pointer" href="/">Home</Link><span aria-hidden="true" className="text-ink/30">/</span><span className="text-ink">About</span></div>
           <h1 className={`${h1Page} max-w-[16ch]`}>Who you work with.</h1>
           <p className={`${lede} mt-6 max-w-[60ch]`}>{site.role}, {site.location}. I work alone, so you talk to me directly and I do the work myself.</p>
         </div>
       </section>
       <section className={`${section} pt-0`}>
-        <div className={`${wrap} max-w-[760px] text-[1.05rem] leading-[1.65] text-ink/80`}>
+        <div className={`${wrap} max-w-[760px] text-[1.05rem] leading-[1.75] text-ink/75 md:text-[1.1rem]`}>
           <p className="mb-4">
             I have built software professionally since 2021. At an agency in Istanbul I worked on stores, backend services,
             integrations and platform migrations for 15 retail and corporate brands, with about 3M monthly visits in total.
@@ -48,7 +48,7 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
-      <Contact />
+      <Contact showProfiles />
     </>
   );
 }

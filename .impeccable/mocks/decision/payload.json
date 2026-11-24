@@ -1,0 +1,91 @@
+{
+  "title": "kahraman.pro için görsel dünya",
+  "question": "Aynı renk ailesi, aynı içerik, yeni bir dünya. Önerilen yönü seç, alternatif al ya da yeniden karıştır.",
+  "options": [
+    {
+      "id": "assigned", "kind": "assigned", "kicker": "THE ROLL",
+      "label": "İş emri: karbonlu form",
+      "lineage": "Ustanın iş emri fişi, mint karbonlu kopya kağıdı, numaralı alanlar ve damga",
+      "thesis": "Siteyi tek kişinin üstlendiği bir iş emri gibi kur: alanlar, numaralar, mint kopya ve damga.",
+      "palette": ["#f7f5ee", "#cde4d9", "#151614", "#2e5a4a"],
+      "materials": ["karbonlu mint kopya kağıdı", "cetvelli form alanları", "mürekkep damgası", "delikli fiş kenarı"],
+      "viewport": "Solda büyük başlık; sağda perforeli mint iş fişi (Client / Job / Stack / Handover) ve içinde asıl buton; altta numaralı alanlara yazılmış 4 rakam.",
+      "risk": "Fazla 'form' süslemesi olursa kostüm gibi durur; detaylar sade tutulmalı.",
+      "raised": [
+        {"from": "crouwel-grid-specimen", "raise": "Sayfa görünür bir ızgaraya oturur; her blok tam hücre birimiyle hizalanır."},
+        {"from": "textiles-weave-drape-fashion-sneaker-box-stacks", "raise": "Her proje ve servis kartı aynı etiket ızgarasıyla yönetilir: ad, tür, yıl alanları."}
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "model-pick", "kind": "pick", "kicker": "IMPECCABLE’S PICK",
+      "label": "Teknik çizim paftası",
+      "lineage": "Mühendislik çizimi: ince ızgara, ölçü çizgileri, sağ alttaki antet kutusu",
+      "thesis": "Her sayfa bir çizim paftası: ölçü çizgileri, ızgara ve 'çizen ve yapan' antet kutusu.",
+      "palette": ["#f6f5ef", "#d4e6df", "#141413"],
+      "materials": ["milimetrik ızgara", "ölçü çizgileri", "antet kutusu"],
+      "viewport": "İnce ızgara zemin üstünde ölçü çizgisiyle işaretlenmiş büyük başlık, sağ altta mint antet kutusu.",
+      "risk": "Geliştirici portfolyolarında sık görülen 'blueprint' diline yakın; tanıdık durabilir.",
+      "html": ".impeccable/mocks/decision/model-pick.html"
+    },
+    {
+      "id": "challenger-crouwel", "kind": "challenger", "catalogId": "crouwel-grid-specimen",
+      "label": "Izgara tipografi posteri", "verdict": "competitive",
+      "lineage": "Wim Crouwel ızgara posterleri",
+      "thesis": "Görünür inşa ızgarası ve dev harfler; sayfa sistemin kanıtı.",
+      "palette": ["#fafaf4", "#d4e6df", "#141413"],
+      "materials": ["ızgara çizgileri", "hücreden kurulan harfler"],
+      "viewport": "Hücrelere oturan anıtsal başlık, ince ızgara görünür.",
+      "case": "Özgünlükte güçlü; ama ziyaretçiye 'tek mühendis, uçtan uca' hikayesini iş emri kadar net anlatmıyor.",
+      "risk": "Okunurluk ve sakinlik kaybı; mevcut dilden fazla uzaklaşır.",
+      "hero": "https://impeccable.style/worlds/cards/crouwel-grid-specimen-hero.webp"
+    },
+    {
+      "id": "challenger-azulejo", "kind": "challenger", "catalogId": "architecture-places-azulejo-station-hall",
+      "label": "Azulejo karo salonu", "verdict": "declined",
+      "lineage": "Kobalt-beyaz karo panolar",
+      "thesis": "Hikaye karo panolarla anlatılır.", "palette": ["#f4f1e8", "#1d3f8f", "#d9a62e"], "materials": ["sırlı karo", "derz ızgarası"],
+      "viewport": "Karo ızgarasına oturan anlatı panoları.", "case": "Renk ailesini bozuyor, hedef kitleyle bağı zayıf.", "risk": "Turistik kostüm.",
+      "kept": "Tam birimlerle yerleşim disiplini (ızgara raise içinde)."
+    },
+    {
+      "id": "challenger-sneaker", "kind": "challenger", "catalogId": "textiles-weave-drape-fashion-sneaker-box-stacks",
+      "label": "Sneaker kutu arşivi", "verdict": "declined",
+      "lineage": "Kutu uç etiketleri", "thesis": "Projeler istiflenmiş kutular.", "palette": ["#d0622b", "#141413", "#f5f2ea"], "materials": ["karton", "uç etiketi"],
+      "viewport": "Kutu duvarı.", "case": "Danışmanlık hikayesine uymuyor.", "risk": "Moda kostümü.",
+      "kept": "Her kartı yöneten etiket ızgarası."
+    },
+    {
+      "id": "challenger-scope", "kind": "challenger", "catalogId": "scientific-notation-oscilloscope-signal-bench",
+      "label": "Osiloskop tezgahı", "verdict": "declined",
+      "lineage": "CRT osiloskop", "thesis": "Sinyal izi ve ölçek.", "palette": ["#0b0d0c", "#39ff7a", "#ffb000"], "materials": ["fosfor", "graticule"],
+      "viewport": "Siyah cam üstünde yeşil iz.", "case": "Açık krem paleti ve sakin dili tamamen bırakır.", "risk": "Neon kliş.",
+      "kept": "Her şeyin tek bir ölçü ızgarasına göre ölçülmesi."
+    },
+    {
+      "id": "challenger-minihompy", "kind": "challenger", "catalogId": "cyworld-minihompy-room",
+      "label": "Minihompy odası", "verdict": "declined",
+      "lineage": "İzometrik kişisel oda", "thesis": "Kimlik dekore edilen bir oda.", "palette": ["#f8d9e4", "#c9e7f2", "#6b5b4b"], "materials": ["pastel duvar kağıdı", "sticker eşyalar"],
+      "viewport": "İzometrik oda.", "case": "Ciddi B2B danışmanlık güvenini zedeler.", "risk": "Oyuncak gibi.",
+      "kept": "Küçük, dürüst sayaçlar (cevap süresi, saat dilimi)."
+    },
+    {
+      "id": "challenger-highlife", "kind": "challenger", "catalogId": "highlife-sleeve",
+      "label": "Highlife plak kapağı", "verdict": "declined",
+      "lineage": "El yazısı plak kapakları", "thesis": "Coşkulu boyalı başlık.", "palette": ["#f28c28", "#2e8b57", "#d7263d", "#f3ead8"], "materials": ["el boyası harf", "kesik portre"],
+      "viewport": "Kemerli başlık altında portre.", "case": "Renkler ve ton tamamen farklı.", "risk": "Dikkat dağıtıcı.",
+      "kept": "Portreyi sahnenin öznesi yapma cesareti (About bölümünde)."
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code"},
+  "canon": true,
+  "canonCard": {
+    "kind": "canon", "label": "Kategori standardı",
+    "thesis": "Ortalanmış başlık, rakamlar, yuvarlak buton: bugünkü sitenin genel hali, kusursuz işlenmiş.",
+    "palette": ["#fafaf4", "#d4e6df", "#141413"], "materials": ["temiz ızgara", "yuvarlak kartlar"],
+    "viewport": "Ortada büyük başlık, altında rakamlar ve buton.", "risk": "Referans siteye en çok benzeyen yol; özgünlük hedefini karşılamaz.",
+    "html": ".impeccable/mocks/decision/canon.html"
+  },
+  "steer": true
+}

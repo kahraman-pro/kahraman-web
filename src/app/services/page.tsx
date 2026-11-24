@@ -25,7 +25,7 @@ export default function ServicesPage() {
     <>
       <section className={pageHero}>
         <div className={wrap}>
-          <div className={crumbs}><Link className="cursor-pointer hover:text-ink" href="/">Home</Link><span>/</span><span>Services</span></div>
+          <div className={crumbs}><Link className="cursor-pointer" href="/">Home</Link><span aria-hidden="true" className="text-ink/30">/</span><span className="text-ink">Services</span></div>
           <h1 className={`${h1Page} max-w-[18ch]`}>Software for the work your team should not do by hand.</h1>
           <p className={`${lede} mt-6 max-w-[60ch]`}>
             Each service starts from a job people do every day and ends with software that does it the same way every time,

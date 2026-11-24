@@ -1,11 +1,11 @@
 // Small illustrated UI panels for the work cards. Figures come from the real projects.
 
-const mini = "min-h-[186px] overflow-hidden rounded-xl border border-ink/10 bg-white text-[0.85rem]";
+const mini = "min-h-[186px] overflow-hidden rounded-[14px] border border-ink/10 bg-paper text-[0.85rem] shadow-[0_1px_2px_rgb(19_21_19/0.05)]";
 const head = "flex items-center justify-between border-b border-ink/10 px-4 py-3 font-medium";
-const status = "inline-flex items-center gap-1.5 text-[0.78rem] font-normal text-ink/60 before:size-1.5 before:rounded-full before:bg-ink before:content-['']";
+const status = "inline-flex items-center gap-1.5 text-[0.78rem] font-normal text-ink/60 before:size-1.5 before:rounded-full before:bg-pine before:content-['']";
 const row = "flex items-center gap-3.5 border-b border-ink/10 px-4 py-2.5 last:border-b-0";
 const pill = "shrink-0 rounded-full border border-ink/20 px-2 py-0.5 text-[0.74rem]";
-const pillDark = "shrink-0 rounded-full border border-ink bg-ink px-2 py-0.5 text-[0.74rem] text-bg";
+const pillDark = "shrink-0 rounded-full border border-pine bg-pine px-2 py-0.5 text-[0.74rem] text-paper";
 const mark = "rounded-[3px] bg-mint px-1";
 
 export function AiCoachPanel() {
@@ -13,7 +13,7 @@ export function AiCoachPanel() {
     <div className={mini} aria-hidden="true">
       <div className={head}>Setup AI <span className={status}>Answered</span></div>
       <div className="flex flex-col gap-2.5 p-4">
-        <div className="max-w-[88%] self-end rounded-xl bg-ink px-3 py-2 leading-[1.45] text-bg">Why was my week negative?</div>
+        <div className="max-w-[88%] self-end rounded-xl rounded-br-md bg-ink px-3 py-2 leading-[1.45] text-paper">Why was my week negative?</div>
         <div className="max-w-[88%] rounded-xl bg-ink/5 px-3 py-2 leading-[1.45]">
           4 of 6 losses broke your <span className={mark}>no trades after 3 losses</span> rule. Without them the week ends +1.4R.
         </div>
@@ -42,7 +42,7 @@ function Meter({ label, width, value, before }: { label: string; width: string; 
     <div className="grid grid-cols-[5.5rem_1fr_3.2rem] items-center gap-3 border-b border-ink/10 px-4 py-2.5 last:border-b-0">
       <span className="text-ink/60">{label}</span>
       <span className="relative h-1 rounded bg-ink/10">
-        <i className={`absolute inset-y-0 left-0 rounded ${before ? "bg-ink/30" : "bg-ink"}`} style={{ width }} />
+        <i className={`absolute inset-y-0 left-0 rounded ${before ? "bg-ink/25" : "bg-pine"}`} style={{ width }} />
       </span>
       <span className="text-right tabular-nums">{value}</span>
     </div>

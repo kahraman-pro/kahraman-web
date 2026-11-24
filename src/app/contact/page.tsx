@@ -15,11 +15,11 @@ export default function ContactPage() {
     <>
       <section className={pageHero}>
         <div className={wrap}>
-          <div className={crumbs}><Link className="cursor-pointer hover:text-ink" href="/">Home</Link><span>/</span><span>Contact</span></div>
+          <div className={crumbs}><Link className="cursor-pointer" href="/">Home</Link><span aria-hidden="true" className="text-ink/30">/</span><span className="text-ink">Contact</span></div>
           <h1 className={`${h1Page} max-w-[16ch]`}>Let&apos;s talk about your project.</h1>
         </div>
       </section>
-      <Contact title="Tell me what should take less time." />
+      <Contact title="Tell me what should take less time." showProfiles />
     </>
   );
 }

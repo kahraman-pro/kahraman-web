@@ -46,6 +46,7 @@ I am not tied to one language or framework. I pick the tools that fit the job, u
 
 - LinkedIn: ${site.linkedin}
 - GitHub: ${site.github}
+- Upwork: ${site.upwork}
 
 ## Contact
 ${contact()}

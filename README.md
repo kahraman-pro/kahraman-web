@@ -16,6 +16,7 @@ I find where software and AI save a team the most time, then design and build it
 [![Website](https://img.shields.io/badge/website-kahraman.pro-141413?style=flat-square)](https://kahraman.pro)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mustafa--kahraman-0a66c2?style=flat-square)](https://www.linkedin.com/in/mustafa--kahraman)
 [![GitHub](https://img.shields.io/badge/GitHub-kahramanX-181717?style=flat-square)](https://github.com/kahramanX)
+[![Upwork](https://img.shields.io/badge/Upwork-Mustafa_Kahraman-14a800?style=flat-square)](https://www.upwork.com/freelancers/~014a9ab0f0d2aab6f3)
 ![Next.js](https://img.shields.io/badge/Next.js-15-000000?style=flat-square)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6?style=flat-square)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?style=flat-square)
@@ -166,7 +167,7 @@ The **MK** monogram is drawn as one line: the right leg of the M is also the ste
 
 **Need software or AI work done properly?**
 
-[kahraman.pro](https://kahraman.pro) · [hello@kahraman.pro](mailto:hello@kahraman.pro) · [LinkedIn](https://www.linkedin.com/in/mustafa--kahraman) · [GitHub](https://github.com/kahramanX)
+[kahraman.pro](https://kahraman.pro) · [hello@kahraman.pro](mailto:hello@kahraman.pro) · [LinkedIn](https://www.linkedin.com/in/mustafa--kahraman) · [GitHub](https://github.com/kahramanX) · [Upwork](https://www.upwork.com/freelancers/~014a9ab0f0d2aab6f3)
 
 © Mustafa Kahraman. The code is shared for reference; the content, logo and project images are not licensed for reuse.
 

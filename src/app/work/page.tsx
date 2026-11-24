@@ -25,7 +25,7 @@ export default function WorkPage() {
     <>
       <section className={pageHero}>
         <div className={wrap}>
-          <div className={crumbs}><Link className="cursor-pointer hover:text-ink" href="/">Home</Link><span>/</span><span>My work</span></div>
+          <div className={crumbs}><Link className="cursor-pointer" href="/">Home</Link><span aria-hidden="true" className="text-ink/30">/</span><span className="text-ink">My work</span></div>
           <h1 className={`${h1Page} max-w-[18ch]`}>Things I have built.</h1>
           <p className={`${lede} mt-6 max-w-[60ch]`}>
             My own products, and years of software for retail and corporate brands. Every project here was designed, built and

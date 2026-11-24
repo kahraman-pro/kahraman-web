@@ -4,9 +4,10 @@ import Link from "next/link";
 import { Contact } from "@/components/Contact";
 import { AiCoachPanel, SpeedPanel, SyncPanel } from "@/components/Panels";
 import { ServiceRows } from "@/components/ServiceRows";
-import { bookingProps, brands, contactHref, ctaLabel, principles, results, site, stats, steps } from "@/content/site";
+import { bookingProps, brands, contactHref, ctaLabel, principles, profiles, results, site, stats, steps } from "@/content/site";
 import { pageMetadata } from "@/lib/seo";
-import { btnPrimary, centerHead, h1, h2, h2Split, h3, headP, lede, linkUnderline, section, splitHead, wrap } from "@/lib/ui";
+import { ArrowRight } from "@/components/Icon";
+import { btnPrimary, card, centerHead, chip, h1, h2, h2Split, h3, headP, lede, linkUnderline, section, splitHead, wrap } from "@/lib/ui";
 
 export const metadata: Metadata = pageMetadata({
   title: site.title,
@@ -58,38 +59,47 @@ const cases = [
 ];
 
 export default function Home() {
+  const [lead, ...rest] = cases;
   return (
     <>
       {/* Hero */}
-      <section className="pb-14 pt-32 text-center md:pb-[72px] md:pt-40">
+      <section className="pb-16 pt-36 text-center md:pb-20 md:pt-48">
         <div className={wrap}>
           <h1 className={`${h1} mx-auto max-w-[15ch]`}>Software and AI, built for how your team works.</h1>
-          <p className={`${lede} mx-auto mt-6 max-w-[54ch]`}>
+          <p className={`${lede} mx-auto mt-7 max-w-[54ch]`}>
             I am a software engineer. I look at how your business runs, show where software and AI save the most time and
             where they do not, then design and build it myself, end to end.
           </p>
-          <ul className="mx-auto mt-12 grid max-w-[760px] grid-cols-2 gap-x-6 gap-y-7 sm:grid-cols-4">
-            {stats.map((s) => (
-              <li key={s.label} className="flex flex-col-reverse items-center justify-end">
-                <span className="mt-1 max-w-[20ch] text-balance text-center text-[0.8125rem] leading-snug text-ink/60">{s.label}</span>
-                <strong className="text-[clamp(1.8rem,3vw,2.3rem)] font-normal leading-[1.2] tracking-[-0.04em]">{s.value}</strong>
+          <div className="mt-10 flex justify-center">
+            <a className={btnPrimary} href={contactHref()} {...bookingProps}>
+              {ctaLabel()}
+              <ArrowRight className="size-4 transition-transform duration-300 ease-soft group-hover/btn:translate-x-0.5" />
+            </a>
+          </div>
+          <ul className={`${card} mx-auto mt-16 grid max-w-[980px] grid-cols-2 text-left sm:grid-cols-4`}>
+            {stats.map((s, i) => (
+              <li
+                key={s.label}
+                className={`flex flex-col gap-1.5 p-5 sm:p-6 ${i % 2 ? "border-l border-ink/10" : ""} ${i > 1 ? "border-t border-ink/10 sm:border-t-0" : ""} ${i === 2 ? "sm:border-l" : ""}`}
+              >
+                <strong className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold leading-none tracking-[-0.04em]">{s.value}</strong>
+                <span className="text-balance text-[0.8125rem] leading-snug text-ink/60">{s.label}</span>
               </li>
             ))}
           </ul>
-          <div className="mt-10 flex justify-center">
-            <a className={btnPrimary} href={contactHref()} {...bookingProps}>{ctaLabel()}</a>
-          </div>
         </div>
       </section>
 
       {/* Brands */}
-      <section aria-label="Brands" className="pb-5 pt-10">
-        <p className="mb-6 text-center text-[0.8125rem] text-ink/60">15+ brands I have built software for</p>
-        <ul className={`${wrap} flex max-w-[1000px] flex-wrap justify-center gap-x-9 gap-y-2.5`}>
-          {brands.map((b) => (
-            <li key={b} className="whitespace-nowrap text-[1.05rem] font-medium tracking-[-0.02em] text-ink/80 sm:text-[1.15rem]">{b}</li>
-          ))}
-        </ul>
+      <section aria-label="Brands" className="pb-4 pt-6">
+        <div className={`${wrap} flex flex-col items-center gap-5 md:flex-row md:gap-10`}>
+          <p className="shrink-0 text-[0.8125rem] text-ink/60 md:w-40 md:text-left">15+ brands I have built software for</p>
+          <ul className="flex flex-1 flex-wrap justify-center gap-x-8 gap-y-2.5 border-ink/10 md:justify-between md:border-l md:pl-10">
+            {brands.map((b) => (
+              <li key={b} className="whitespace-nowrap text-[1.05rem] font-semibold tracking-[-0.02em] text-ink/55 sm:text-[1.12rem]">{b}</li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       {/* Work */}
@@ -102,26 +112,11 @@ export default function Home() {
               half the time. I design and build each one myself, from the first question to the handover.
             </p>
           </div>
-          <div className="mx-auto grid max-w-[560px] gap-5 lg:max-w-none lg:grid-cols-3">
-            {cases.map((c) => (
-              <Link
-                key={c.title}
-                href={c.href}
-                className="cursor-pointer flex flex-col rounded-3xl border border-ink/10 bg-mint p-3.5 transition-transform duration-500 ease-soft hover:-translate-y-1"
-              >
-                {c.panel}
-                <div className="px-2.5 pb-2.5 pt-6">
-                  <div className="mb-3 flex items-baseline gap-2.5 text-[0.9rem]">
-                    <b className="font-medium">{c.who}</b>
-                    <span className="text-[0.85rem] text-ink/60">{c.tag}</span>
-                  </div>
-                  <h3 className={`${h3} mb-3 text-[1.3rem]`}>{c.title}</h3>
-                  <p className="m-0 text-[0.95rem] text-ink/80">{c.text}</p>
-                </div>
-              </Link>
-            ))}
+          <div className="grid gap-5 lg:grid-cols-2">
+            <CaseCard c={lead} wide />
+            {rest.map((c) => <CaseCard key={c.title} c={c} />)}
           </div>
-          <p className="mt-5 text-[0.8125rem] text-ink/60">
+          <p className="mt-6 text-[0.8125rem] text-ink/60">
             Panels are illustrations. Figures in them come from the projects.{" "}
             <Link className={linkUnderline} href="/work">See all my work.</Link>
           </p>
@@ -145,36 +140,47 @@ export default function Home() {
       {/* About */}
       <section id="about" className={section}>
         <div className={wrap}>
-          <div className="grid gap-10 rounded-3xl border border-ink/10 bg-mint p-7 sm:p-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16 lg:p-14">
-            <div>
-              <Image
-                src="/brand/mustafa-kahraman.webp"
-                alt="Mustafa Kahraman smiling on a wooden balcony at sunset"
-                width={900}
-                height={1125}
-                sizes="(min-width: 640px) 220px, 160px"
-                className="mb-7 aspect-[4/5] w-40 rounded-[18px] object-cover sm:w-[220px]"
-              />
+          <div className="grid gap-10 md:grid-cols-[minmax(0,280px)_minmax(0,1fr)] md:gap-14 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] lg:gap-20">
+            <figure className="m-0 max-w-[240px] self-start md:sticky md:top-28 md:max-w-none">
+              <div className="rounded-[24px] bg-mint p-2.5">
+                <Image
+                  src="/brand/mustafa-kahraman.webp"
+                  alt="Mustafa Kahraman smiling on a wooden balcony at sunset"
+                  width={900}
+                  height={1125}
+                  sizes="(min-width: 1024px) 320px, (min-width: 768px) 280px, 240px"
+                  className="aspect-[4/5] w-full rounded-[16px] object-cover"
+                />
+              </div>
+              <figcaption className="mt-4 flex flex-col px-1">
+                <b className="text-[1.1rem] font-semibold tracking-[-0.015em]">{site.name}</b>
+                <span className="text-[0.8125rem] text-ink/60">{site.role}, {site.location}</span>
+                <span className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[0.8125rem]">
+                  {profiles.map((p) => (
+                    <a key={p.label} href={p.href} target="_blank" rel="noopener noreferrer" className={linkUnderline}>{p.label}</a>
+                  ))}
+                </span>
+              </figcaption>
+            </figure>
+            <div className="md:pt-4">
               <h2 className={`${h2Split} mb-8`}>Who you work with.</h2>
-              <b className="block text-[1.1rem] font-medium">{site.name}</b>
-              <span className="text-[0.8125rem] text-ink/60">{site.role}, {site.location}</span>
-            </div>
-            <div className="text-[1.05rem] leading-[1.65] text-ink/80 md:text-[1.08rem]">
-              <p className="mb-4">
-                I have built software professionally since 2021. At an agency in Istanbul I worked on stores, backend services,
-                integrations and platform migrations for 15 retail and corporate brands, with about 3M monthly visits in total.
-                Today I also build and run my own products, including SetupBook, a live AI product.
-              </p>
-              <p className="mb-4">
-                I am not tied to one language or framework. I pick the tools that fit your job and your team, and I use AI every
-                day to build faster, while checking and testing everything myself before it reaches you.
-              </p>
-              <p className="mb-0">
-                I work alone, so you talk to me directly and I do the work myself. No account managers, no handoffs.
-              </p>
-              <ul aria-label="What I build" className="mt-6 flex flex-wrap gap-2">
+              <div className="max-w-[60ch] text-[1.05rem] leading-[1.7] text-ink/75 md:text-[1.1rem]">
+                <p className="mb-4">
+                  I have built software professionally since 2021. At an agency in Istanbul I worked on stores, backend services,
+                  integrations and platform migrations for 15 retail and corporate brands, with about 3M monthly visits in total.
+                  Today I also build and run my own products, including SetupBook, a live AI product.
+                </p>
+                <p className="mb-4">
+                  I am not tied to one language or framework. I pick the tools that fit your job and your team, and I use AI every
+                  day to build faster, while checking and testing everything myself before it reaches you.
+                </p>
+                <p className="mb-0">
+                  I work alone, so you talk to me directly and I do the work myself. No account managers, no handoffs.
+                </p>
+              </div>
+              <ul aria-label="What I build" className="mt-8 flex flex-wrap gap-2">
                 {capabilities.map((t) => (
-                  <li key={t} className="rounded-full border border-ink/20 px-3 py-1 text-[0.8rem] text-ink/80">{t}</li>
+                  <li key={t} className={chip}>{t}</li>
                 ))}
               </ul>
             </div>
@@ -186,11 +192,11 @@ export default function Home() {
       <section className={section}>
         <div className={wrap}>
           <div className={centerHead}><h2 className={h2}>Advice, then the build.</h2></div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
             {principles.map((p) => (
-              <div key={p.title}>
-                <h3 className="mb-2.5 text-[1.05rem] font-medium tracking-[-0.02em]">{p.title}</h3>
-                <p className="m-0 text-[0.95rem] text-ink/60">{p.text}</p>
+              <div key={p.title} className="relative border-t border-ink/12 pt-6 before:absolute before:-top-px before:left-0 before:h-0.5 before:w-10 before:bg-pine before:content-['']">
+                <h3 className="mb-2.5 text-[1.08rem] font-semibold tracking-[-0.02em]">{p.title}</h3>
+                <p className="m-0 text-[0.95rem] text-ink/65">{p.text}</p>
               </div>
             ))}
           </div>
@@ -201,12 +207,12 @@ export default function Home() {
       <section id="results" className={section}>
         <div className={wrap}>
           <div className={centerHead}><h2 className={h2}>Numbers from the work.</h2></div>
-          <div className="grid gap-10 md:grid-cols-3">
-            {results.map((r) => (
-              <div key={r.value}>
-                <strong className="mb-4 block text-[clamp(2rem,3.4vw,2.75rem)] font-normal leading-[1.1] tracking-[-0.04em]">{r.value}</strong>
-                <p className="mb-3.5 text-[1.05rem] leading-[1.55]">{r.text}</p>
-                <span className="text-[0.8125rem] text-ink/60">{r.who}</span>
+          <div className={`${card} grid md:grid-cols-3`}>
+            {results.map((r, i) => (
+              <div key={r.value} className={`flex flex-col p-7 lg:p-9 ${i ? "border-t border-ink/10 md:border-l md:border-t-0" : ""}`}>
+                <strong className="mb-5 block text-[clamp(2rem,3.4vw,2.75rem)] font-semibold leading-[1.05] tracking-[-0.04em]">{r.value}</strong>
+                <p className="mb-6 text-[1.02rem] leading-[1.6] text-ink/80">{r.text}</p>
+                <span className="mt-auto inline-flex items-center gap-2 text-[0.8125rem] text-pine before:size-1.5 before:rounded-full before:bg-pine before:content-['']">{r.who}</span>
               </div>
             ))}
           </div>
@@ -217,22 +223,46 @@ export default function Home() {
       <section id="process" className={section}>
         <div className={wrap}>
           <div className={centerHead}><h2 className={h2}>From first message to handover.</h2></div>
-          <ol className="m-0 grid list-none gap-y-6 p-0 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map((s) => (
-              <li
-                key={s.when}
-                className="relative border-t border-ink/10 pr-7 pt-8 before:absolute before:-top-1 before:left-0 before:size-[7px] before:rounded-full before:bg-ink before:shadow-[0_0_0_4px_var(--color-bg)] before:content-['']"
-              >
-                <span className="mb-3 block text-[0.8125rem] text-ink/60">{s.when}</span>
+          <ol className="m-0 grid list-none gap-4 p-0 sm:grid-cols-2 lg:grid-cols-4">
+            {steps.map((s, i) => (
+              <li key={s.when} className={`${card} relative flex flex-col p-6`}>
+                <div className="mb-6 flex items-center gap-3">
+                  <span className="rounded-md bg-mint px-2 py-0.5 text-[0.8125rem] font-medium">{s.when}</span>
+                  {i < steps.length - 1 && <span aria-hidden="true" className="hidden h-px flex-1 lg:block bg-[repeating-linear-gradient(90deg,rgb(19_21_19/0.2)_0_4px,transparent_4px_8px)]" />}
+                </div>
                 <h3 className={`${h3} mb-2`}>{s.title}</h3>
-                <p className="text-[0.95rem] text-ink/60">{s.text}</p>
+                <p className="text-[0.95rem] text-ink/65">{s.text}</p>
               </li>
             ))}
           </ol>
         </div>
       </section>
 
-      <Contact />
+      <Contact showProfiles />
     </>
+  );
+}
+
+function CaseCard({ c, wide = false }: { c: (typeof cases)[number]; wide?: boolean }) {
+  return (
+    <Link
+      href={c.href}
+      className={`${card} group flex cursor-pointer flex-col p-2.5 transition duration-500 ease-soft hover:-translate-y-1 hover:shadow-lift ${
+        wide ? "lg:col-span-2 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-center" : ""
+      }`}
+    >
+      <div className={`rounded-[14px] bg-mint p-4 sm:p-5 ${wide ? "lg:order-2 lg:p-8" : ""}`}>{c.panel}</div>
+      <div className={`px-3 pb-3 pt-6 ${wide ? "lg:px-8 lg:py-8" : ""}`}>
+        <div className="mb-3 flex items-center gap-2.5 text-[0.875rem]">
+          <b className="font-semibold">{c.who}</b>
+          <span className="rounded-md border border-ink/12 px-2 py-0.5 text-[0.78rem] text-ink/65">{c.tag}</span>
+          <span aria-hidden="true" className="ml-auto flex size-9 items-center justify-center rounded-full border border-ink/12 text-ink/60 transition duration-300 ease-soft group-hover:border-ink group-hover:bg-ink group-hover:text-paper">
+            <ArrowRight className="size-4 transition-transform duration-300 ease-soft group-hover:translate-x-0.5" />
+          </span>
+        </div>
+        <h3 className={`${h3} mb-3 ${wide ? "text-[clamp(1.4rem,2.2vw,1.9rem)] leading-[1.2]" : "text-[1.3rem]"}`}>{c.title}</h3>
+        <p className="m-0 max-w-[52ch] text-[0.95rem] text-ink/70">{c.text}</p>
+      </div>
+    </Link>
   );
 }

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
+import { ArrowLeft, ArrowRight } from "./Icon";
 
 export type LightboxImage = { src: string; alt: string; width?: number; height?: number };
 
@@ -48,7 +49,7 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
         <button
           type="button"
           onClick={() => setIndex(0)}
-          className="block w-full cursor-zoom-in overflow-hidden rounded-3xl border border-ink/10 bg-ink"
+          className="block w-full cursor-zoom-in overflow-hidden rounded-[20px] border border-ink/10 bg-ink shadow-card"
           aria-label={`Open image: ${cover.alt}`}
         >
           <Image src={cover.src} alt={cover.alt} width={1920} height={1200} priority sizes="(max-width: 1260px) 100vw, 1180px" className="h-auto w-full" />
@@ -58,11 +59,11 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
       {showGallery && images.length > 0 && (
         <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-5">
           {images.map((img, i) => (
-            <figure key={img.src} className="m-0 rounded-2xl border border-ink/10 bg-mint p-2 sm:p-2.5">
+            <figure key={img.src} className="m-0 rounded-[18px] bg-mint p-2 sm:p-2.5">
               <button
                 type="button"
                 onClick={() => setIndex(i + offset)}
-                className="block w-full cursor-zoom-in overflow-hidden rounded-[10px]"
+                className="block w-full cursor-zoom-in overflow-hidden rounded-[11px]"
                 aria-label={`Open image: ${img.alt}`}
               >
                 <Image
@@ -74,7 +75,7 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
                   className="h-auto w-full transition-transform duration-500 ease-soft hover:scale-[1.03]"
                 />
               </button>
-              <figcaption className="px-1 pb-0.5 pt-2.5 text-[0.78rem] leading-[1.45] text-ink/60">{img.alt}</figcaption>
+              <figcaption className="px-1 pb-0.5 pt-2.5 text-[0.78rem] leading-[1.45] text-ink/70">{img.alt}</figcaption>
             </figure>
           ))}
         </div>
@@ -101,7 +102,7 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
               type="button"
               onClick={close}
               autoFocus
-              className="cursor-pointer rounded-full border border-bg/25 px-4 py-1.5 font-medium text-bg transition-colors hover:bg-bg/10"
+              className="cursor-pointer rounded-[10px] border border-bg/25 px-4 py-1.5 font-medium text-bg transition-colors hover:bg-bg/10"
             >
               Close
             </button>
@@ -118,7 +119,7 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
                   onClick={(e) => { e.stopPropagation(); step(-1); }}
                   className="absolute left-3 top-1/2 hidden cursor-pointer size-11 -translate-y-1/2 items-center justify-center rounded-full border border-bg/25 text-xl text-bg transition-colors hover:bg-bg/10 sm:flex"
                 >
-                  ←
+                  <ArrowLeft className="size-5" />
                 </button>
                 <button
                   type="button"
@@ -126,7 +127,7 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
                   onClick={(e) => { e.stopPropagation(); step(1); }}
                   className="absolute right-3 top-1/2 hidden cursor-pointer size-11 -translate-y-1/2 items-center justify-center rounded-full border border-bg/25 text-xl text-bg transition-colors hover:bg-bg/10 sm:flex"
                 >
-                  →
+                  <ArrowRight className="size-5" />
                 </button>
               </>
             )}

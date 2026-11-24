@@ -16,3 +16,8 @@
 - [Passport.AI](https://kahraman.pro/work/passport-ai): ID and passport photo app with on-device face checks and AI retouching.
 - [Simple Note](https://kahraman.pro/work/simple-note): offline-first note app for iOS, Android and web.
 - [Vocabulary](https://kahraman.pro/work/english-vocabulary): spaced-repetition English vocabulary app in 24 languages.
+
+## Profiles
+- [Upwork](https://www.upwork.com/freelancers/~014a9ab0f0d2aab6f3)
+- [LinkedIn](https://www.linkedin.com/in/mustafa--kahraman)
+- [GitHub](https://github.com/kahramanX)

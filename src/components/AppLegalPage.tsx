@@ -48,23 +48,23 @@ export async function AppLegalPage({ doc, params }: { doc: LegalDoc } & AppParam
     <section className={`${pageHero} pb-20`}>
       <div className={wrap}>
         <div className={crumbs}>
-          <Link className="cursor-pointer hover:text-ink" href="/">Home</Link>
-          <span>/</span>
-          {project ? <Link className="cursor-pointer hover:text-ink" href={`/work/${project.slug}`}>{app.name}</Link> : <span>{app.name}</span>}
-          <span>/</span>
-          <span>{title}</span>
+          <Link className="cursor-pointer" href="/">Home</Link>
+          <span aria-hidden="true" className="text-ink/30">/</span>
+          {project ? <Link className="cursor-pointer" href={`/work/${project.slug}`}>{app.name}</Link> : <span>{app.name}</span>}
+          <span aria-hidden="true" className="text-ink/30">/</span>
+          <span className="text-ink">{title}</span>
         </div>
         <h1 className={h1Page}>{title}.</h1>
         <p className="mt-4 text-[0.9rem] text-ink/60">{app.name} · Last updated: {formatDate(app.updated)}</p>
 
-        <nav aria-label={`${app.name} documents`} className="mt-8 flex flex-wrap gap-2">
+        <nav aria-label={`${app.name} documents`} className="mt-8 inline-flex flex-wrap gap-1 rounded-xl border border-ink/10 bg-paper p-1 shadow-card">
           {(Object.keys(APP_LEGAL_DOCS) as LegalDoc[]).map((key) => (
             <Link
               key={key}
               href={`/${key}/${app.repo}`}
               aria-current={key === doc ? "page" : undefined}
-              className={`cursor-pointer rounded-full border px-4 py-1.5 text-[0.85rem] transition-colors ${
-                key === doc ? "border-ink bg-ink text-bg" : "border-ink/20 text-ink/80 hover:bg-ink/5"
+              className={`cursor-pointer rounded-[9px] px-3.5 py-1.5 text-[0.85rem] transition-colors ${
+                key === doc ? "bg-ink text-paper" : "text-ink/70 hover:bg-mint-soft hover:text-ink"
               }`}
             >
               {APP_LEGAL_DOCS[key].title}
@@ -77,7 +77,7 @@ export async function AppLegalPage({ doc, params }: { doc: LegalDoc } & AppParam
             <ol className="sticky top-24 flex flex-col gap-2 border-t border-ink/10 pt-4">
               {sections.map((s, i) => (
                 <li key={s.heading}>
-                  <a href={`#s-${i}`} className="block cursor-pointer py-0.5 text-[0.85rem] text-ink/60 transition-colors hover:text-ink">{s.heading}</a>
+                  <a href={`#s-${i}`} className="block cursor-pointer py-0.5 text-[0.85rem] text-ink/60 transition-colors hover:text-pine">{s.heading}</a>
                 </li>
               ))}
             </ol>
@@ -85,7 +85,7 @@ export async function AppLegalPage({ doc, params }: { doc: LegalDoc } & AppParam
           <div className="border-t border-ink/10">
             {sections.map(({ heading, body }, i) => (
               <section key={heading} id={`s-${i}`} className="scroll-mt-24 border-b border-ink/10 py-8">
-                <h2 className="mb-4 text-[1.35rem] font-medium leading-[1.3] tracking-[-0.02em]">{heading}</h2>
+                <h2 className="mb-4 text-[1.35rem] font-semibold leading-[1.3] tracking-[-0.02em]">{heading}</h2>
                 <Markdown content={body} />
               </section>
             ))}

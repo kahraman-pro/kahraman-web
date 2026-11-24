@@ -16,7 +16,7 @@ const STORES = [
   },
 ];
 
-const base = "inline-flex min-h-[54px] items-center gap-3 rounded-2xl border px-4 text-left leading-none transition-colors";
+const base = "inline-flex min-h-[54px] items-center gap-3 rounded-xl border px-4 text-left leading-none transition-colors";
 
 export function StoreButtons({ links, appName }: { links: StoreLinks; appName: string }) {
   return (
@@ -39,7 +39,7 @@ export function StoreButtons({ links, appName }: { links: StoreLinks; appName: s
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${appName} on ${name}`}
-            className={`${base} cursor-pointer border-ink bg-ink text-bg hover:bg-[#2a2a28]`}
+            className={`${base} cursor-pointer border-ink bg-ink text-paper hover:border-pine hover:bg-pine`}
           >
             {content}
           </a>

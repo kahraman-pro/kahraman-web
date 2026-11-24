@@ -11,10 +11,18 @@ export const site = {
   bookingUrl: env.bookingUrl,
   linkedin: "https://www.linkedin.com/in/mustafa--kahraman",
   github: "https://github.com/kahramanX",
+  upwork: "https://www.upwork.com/freelancers/~014a9ab0f0d2aab6f3",
   title: "Software Engineer and AI Consultant, Mustafa Kahraman",
   description:
     "Software engineer and AI consultant in İzmir, Türkiye. I find where software and AI save your team the most time, then design and build it end to end.",
 };
+
+/** Public profiles, shown in the footer, the contact block and the contact page. */
+export const profiles = [
+  { label: "Upwork", href: site.upwork },
+  { label: "LinkedIn", href: site.linkedin },
+  { label: "GitHub", href: site.github },
+];
 
 export function contactHref(subject = "Project inquiry") {
   if (site.bookingUrl) return site.bookingUrl;

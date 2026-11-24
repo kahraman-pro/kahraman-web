@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { APP_LEGAL_DOCS, APPS, type LegalDoc } from "@/content/app-legal";
+import { posts } from "@/content/blog";
 import { services } from "@/content/services";
 import { projects } from "@/content/work";
 import { absoluteUrl } from "@/lib/seo";
@@ -24,7 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         images: [p.cover, ...p.gallery.map((g) => g.src)].filter((src): src is string => Boolean(src)).map(absoluteUrl),
       }),
     ),
-    page("/blog", 0.6, "monthly"),
+    page("/blog", 0.6, "weekly"),
+    ...posts.map((p) => page(`/blog/${p.slug}`, 0.6, "yearly", { lastModified: new Date(`${p.date}T00:00:00Z`) })),
     page("/about", 0.6, "monthly"),
     page("/contact", 0.6, "monthly"),
     page("/privacy", 0.2, "yearly"),

@@ -18,7 +18,7 @@
 - [Vocabulary](https://kahraman.pro/work/english-vocabulary): spaced-repetition English vocabulary app in 24 languages.
 
 ## Blog
-- [What I can do for your team](https://kahraman.pro/blog): what I take on, how a project starts and how to reach me.
+- [What I can do for your team](https://kahraman.pro/blog/what-i-can-do-for-your-team): what I take on and how to reach me.
 
 ## Profiles
 - [Upwork](https://www.upwork.com/freelancers/~014a9ab0f0d2aab6f3)

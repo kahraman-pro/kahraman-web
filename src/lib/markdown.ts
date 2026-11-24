@@ -1,4 +1,5 @@
 import { principles, results, site, steps } from "@/content/site";
+import { posts, getPost } from "@/content/blog";
 import { getService, services } from "@/content/services";
 import { getProject, projects } from "@/content/work";
 
@@ -69,18 +70,9 @@ const workIndex = () => `# Work
 ${projects.map((p) => `## [${p.name}](${site.url}/work/${p.slug})\n${p.kind}, ${p.year}. ${p.summary}`).join("\n\n")}
 `;
 
-const blogPage = () => `# What I can do for your team
+const blogIndex = () => `# Blog
 
-I am one engineer who advises and builds. This page lists what I take on, how a project starts and how to reach me.
-
-## What I take on
-${services.map((s) => `- [${s.title.replace(/\.$/, "")}](${site.url}/services/${s.slug}): ${s.short}`).join("\n")}
-
-## How a project starts
-${steps.map((s) => `${s.when}. **${s.title}**: ${s.text}`).join("\n")}
-
-## Contact
-${contact()}
+${posts.map((p) => `## [${p.title.replace(/\.$/, "")}](${site.url}/blog/${p.slug})\n${p.date}. ${p.summary}`).join("\n\n")}
 `;
 
 export function markdownFor(path: string[] = []): string | undefined {
@@ -89,7 +81,7 @@ export function markdownFor(path: string[] = []): string | undefined {
   if (path.length === 1) {
     if (a === "about") return about();
     if (a === "contact") return contactPage();
-    if (a === "blog") return blogPage();
+    if (a === "blog") return blogIndex();
     if (a === "services") return servicesIndex();
     if (a === "work") return workIndex();
   }
@@ -97,6 +89,14 @@ export function markdownFor(path: string[] = []): string | undefined {
     const s = getService(b);
     if (!s) return;
     return `# ${s.title}\n\n${s.intro}\n\n## ${s.painsTitle}\n${s.pains.map((p) => `- **${p.title}** ${p.text}`).join("\n")}\n\n## What I build\n${s.builds.map((p) => `- **${p.title}** ${p.text}`).join("\n")}\n\n## Contact\n${contact()}\n`;
+  }
+  if (path.length === 2 && a === "blog") {
+    const p = getPost(b);
+    if (!p) return;
+    const body = p.body
+      .map((x) => (x.type === "p" ? x.text : x.items.map((it) => `- [${it.title}](${site.url}${it.href}): ${it.text}`).join("\n")))
+      .join("\n\n");
+    return `# ${p.title}\n\n${p.date}\n\n${body}\n\n## Contact\n${contact()}\n`;
   }
   if (path.length === 2 && a === "work") {
     const p = getProject(b);

@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Contact } from "@/components/Contact";
-import { ServiceRows } from "@/components/ServiceRows";
-import { steps } from "@/content/site";
-import { breadcrumbLd, jsonLd, pageMetadata } from "@/lib/seo";
-import { crumbs, h1Page, h2Small, lede, linkUnderline, pageHero, section, wrap } from "@/lib/ui";
+import { ArrowRight } from "@/components/Icon";
+import { formatDate, posts } from "@/content/blog";
+import { absoluteUrl, breadcrumbLd, jsonLd, pageMetadata } from "@/lib/seo";
+import { crumbs, h1Page, lede, pageHero, wrap } from "@/lib/ui";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Blog: what I can do for your team",
-  description:
-    "What a software engineer and AI consultant can do for a small team: custom software, AI agents, AI consulting, integrations and fixes, and how to reach me.",
+  title: "Blog: software and AI for small teams",
+  description: "Short posts by Mustafa Kahraman on what software and AI can do for a small team.",
   path: "/blog",
 });
+
+const listLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Blog",
+  itemListElement: posts.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p.title.replace(/\.$/, ""), url: absoluteUrl(`/blog/${p.slug}`) })),
+};
 
 export default function BlogPage() {
   return (
@@ -19,43 +25,41 @@ export default function BlogPage() {
       <section className={pageHero}>
         <div className={wrap}>
           <div className={crumbs}><Link className="cursor-pointer" href="/">Home</Link><span aria-hidden="true" className="text-ink/30">/</span><span className="text-ink">Blog</span></div>
-          <h1 className={`${h1Page} max-w-[16ch]`}>What I can do for your team.</h1>
-          <p className={`${lede} mt-6 max-w-[60ch]`}>
-            I am one engineer who advises and builds. This page lists what I take on, how a project starts and how to reach me.
-          </p>
+          <h1 className={`${h1Page} max-w-[16ch]`}>Blog.</h1>
+          <p className={`${lede} mt-6 max-w-[60ch]`}>Short posts on what software and AI can do for a small team.</p>
         </div>
       </section>
 
-      <section>
+      <section className="pb-16 md:pb-24">
         <div className={wrap}>
-          <h2 className={`${h2Small} mb-8 max-w-[24ch]`}>What I take on.</h2>
-          <ServiceRows />
-        </div>
-      </section>
-
-      <section className={`${section} pt-0`}>
-        <div className={wrap}>
-          <h2 className={`${h2Small} mb-8 max-w-[24ch]`}>How a project starts.</h2>
-          <ol className="border-t border-ink/10">
-            {steps.map((s, i) => (
-              <li key={s.title} className="grid gap-2 border-b border-ink/10 py-7 md:grid-cols-[4rem_1fr_1.4fr] md:gap-10">
-                <span className="text-[0.9rem] font-medium tabular-nums text-accent">{i + 1}</span>
-                <h3 className="text-[1.15rem] font-semibold leading-[1.3] tracking-[-0.02em] md:text-[1.25rem]">{s.title}</h3>
-                <p className="m-0 max-w-[60ch] text-ink/65">{s.text}</p>
-              </li>
+          <div className="border-t border-ink/10">
+            {posts.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/blog/${p.slug}`}
+                className="group relative isolate grid cursor-pointer gap-2 border-b border-ink/10 py-7 pr-14 transition-colors duration-300 ease-soft md:grid-cols-[11rem_1fr_1fr] md:gap-10"
+              >
+                <span aria-hidden="true" className="absolute inset-x-[-14px] inset-y-1.5 -z-10 rounded-2xl bg-band-soft opacity-0 transition-opacity duration-300 ease-soft group-hover:opacity-100" />
+                <time dateTime={p.date} className="text-[0.9rem] tabular-nums text-ink/60 md:pt-1">{formatDate(p.date)}</time>
+                <h2 className="text-[1.15rem] font-semibold leading-[1.3] tracking-[-0.02em] md:text-[1.25rem]">{p.title}</h2>
+                <p className="m-0 text-ink/65">{p.summary}</p>
+                <span
+                  aria-hidden="true"
+                  className="absolute right-0 top-7 flex size-9 items-center justify-center rounded-full border border-ink/12 bg-paper text-ink/60 transition duration-300 ease-soft group-hover:border-ink group-hover:bg-ink group-hover:text-paper"
+                >
+                  <ArrowRight className="size-4 transition-transform duration-300 ease-soft group-hover:translate-x-0.5" />
+                </span>
+              </Link>
             ))}
-          </ol>
-          <p className="mt-8 max-w-[60ch] text-ink/65">
-            Want to see proof first? Read <Link className={linkUnderline} href="/work">my work</Link> or <Link className={linkUnderline} href="/about">who you work with</Link>.
-          </p>
+          </div>
         </div>
       </section>
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={jsonLd(breadcrumbLd([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }]))}
+        dangerouslySetInnerHTML={jsonLd([listLd, breadcrumbLd([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }])])}
       />
-      <Contact title="How to reach me." showProfiles />
+      <Contact />
     </>
   );
 }

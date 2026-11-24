@@ -74,7 +74,7 @@ export default async function ProjectPage({ params }: Params) {
           <p className={`${lede} mt-6 max-w-[62ch]`}>{p.summary}</p>
           <ul className="mt-6 flex flex-wrap gap-2">
             {p.markers.map((m) => (
-              <li key={m} className="rounded-md bg-mint px-2.5 py-1 text-[0.72rem] font-medium tracking-[0.04em] text-ink">{m}</li>
+              <li key={m} className="rounded-md bg-band px-2.5 py-1 text-[0.72rem] font-medium tracking-[0.04em] text-ink">{m}</li>
             ))}
           </ul>
           {(p.link || stores) && (
@@ -142,7 +142,7 @@ export default async function ProjectPage({ params }: Params) {
                 <li key={doc}>
                   <Link
                     href={`/${doc}/${legalApp.repo}`}
-                    className="group inline-flex cursor-pointer items-center gap-1.5 text-[0.92rem] transition-colors hover:text-pine"
+                    className="group inline-flex cursor-pointer items-center gap-1.5 text-[0.92rem] transition-colors hover:text-accent"
                   >
                     {APP_LEGAL_DOCS[doc].title}
                     <ArrowRight className="size-3.5 transition-transform duration-300 ease-soft group-hover:translate-x-0.5" />
@@ -160,7 +160,7 @@ export default async function ProjectPage({ params }: Params) {
             <span className="text-[0.8125rem] text-ink/60">Next project</span>
             <strong className="block text-[clamp(1.4rem,3vw,2.2rem)] font-semibold tracking-[-0.03em]">{next.name}</strong>
           </div>
-          <span aria-hidden="true" className="flex size-12 flex-none items-center justify-center rounded-full bg-ink text-paper transition duration-300 ease-soft group-hover:bg-pine"><ArrowRight className="size-5 transition-transform duration-300 ease-soft group-hover:translate-x-0.5" /></span>
+          <span aria-hidden="true" className="flex size-12 flex-none items-center justify-center rounded-full bg-ink text-paper transition duration-300 ease-soft group-hover:bg-accent"><ArrowRight className="size-5 transition-transform duration-300 ease-soft group-hover:translate-x-0.5" /></span>
         </Link>
       </div>
 

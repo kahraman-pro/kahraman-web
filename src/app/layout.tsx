@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Schibsted_Grotesk } from "next/font/google";
+import { Onest } from "next/font/google";
 import { Header } from "@/components/Header";
 import { WebMcp } from "@/components/WebMcp";
 import { Footer } from "@/components/Footer";
@@ -8,7 +8,7 @@ import { env } from "@/lib/env";
 import { jsonLd } from "@/lib/seo";
 import "./globals.css";
 
-const sans = Schibsted_Grotesk({ subsets: ["latin", "latin-ext"], variable: "--font-schibsted", display: "swap" });
+const sans = Onest({ subsets: ["latin", "latin-ext"], variable: "--font-onest", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f7f6f0",
+  themeColor: "#f2f4f1",
   colorScheme: "light",
 };
 
@@ -114,8 +114,8 @@ const graph = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} scroll-smooth scroll-pt-24 motion-reduce:scroll-auto [scrollbar-color:rgb(19_21_19/0.25)_transparent]`}>
-      <body className="overflow-x-clip bg-bg font-sans text-base leading-[1.6] text-ink caret-pine antialiased selection:bg-mint selection:text-ink">
+    <html lang="en" className={`${sans.variable} scroll-smooth scroll-pt-24 motion-reduce:scroll-auto [scrollbar-color:rgb(20_33_61/0.25)_transparent]`}>
+      <body className="overflow-x-clip bg-bg font-sans text-base leading-[1.6] text-ink caret-accent antialiased selection:bg-band selection:text-ink">
         <a
           href="#main"
           className="absolute -left-[999px] top-0 z-[200] rounded-xl bg-ink px-4 py-2 text-paper focus:left-4 focus:top-3"

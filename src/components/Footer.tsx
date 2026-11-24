@@ -4,7 +4,7 @@ import { profiles, site } from "@/content/site";
 import { wrap } from "@/lib/ui";
 
 export function Footer() {
-  const link = "cursor-pointer transition-colors hover:text-pine";
+  const link = "cursor-pointer transition-colors hover:text-accent";
   return (
     <footer className="pb-8 pt-16 text-[0.88rem] text-ink/60">
       <div className={wrap}>
@@ -22,6 +22,7 @@ export function Footer() {
             ))}
             <Link className={link} href="/services">Services</Link>
             <Link className={link} href="/work">My work</Link>
+            <Link className={link} href="/blog">Blog</Link>
             <Link className={link} href="/about">About</Link>
             <Link className={link} href="/contact">Contact</Link>
             <Link className={link} href="/privacy">Privacy</Link>

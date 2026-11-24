@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 // Small, dependency-free markdown renderer for the app documents.
 // Supports paragraphs (blank line between), "- " lists, **bold**, `code` and [text](url).
-const linkClass = "cursor-pointer text-ink underline decoration-ink/25 underline-offset-[0.22em] transition-colors hover:text-pine hover:decoration-pine";
+const linkClass = "cursor-pointer text-ink underline decoration-ink/25 underline-offset-[0.22em] transition-colors hover:text-accent hover:decoration-accent";
 
 function renderInline(text: string): ReactNode[] {
   const nodes: ReactNode[] = [];
@@ -25,7 +25,7 @@ function renderInline(text: string): ReactNode[] {
     } else if (tok.startsWith("**")) {
       nodes.push(<strong key={key++} className="font-semibold text-ink">{tok.slice(2, -2)}</strong>);
     } else {
-      nodes.push(<code key={key++} className="rounded-md bg-mint-soft px-1.5 py-0.5 text-[0.88em]">{tok.slice(1, -1)}</code>);
+      nodes.push(<code key={key++} className="rounded-md bg-band-soft px-1.5 py-0.5 text-[0.88em]">{tok.slice(1, -1)}</code>);
     }
     last = m.index + tok.length;
   }
@@ -59,7 +59,7 @@ export function Markdown({ content }: { content: string }) {
       flushPara();
       list ??= [];
       list.push(
-        <li key={`li-${list.length}`} className="relative pl-6 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-3 before:bg-pine/60 before:content-['']">
+        <li key={`li-${list.length}`} className="relative pl-6 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-3 before:bg-accent/60 before:content-['']">
           {renderInline(line.replace(/^[-*]\s/, ""))}
         </li>,
       );

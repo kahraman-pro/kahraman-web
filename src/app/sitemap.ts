@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         images: [p.cover, ...p.gallery.map((g) => g.src)].filter((src): src is string => Boolean(src)).map(absoluteUrl),
       }),
     ),
+    page("/blog", 0.6, "monthly"),
     page("/about", 0.6, "monthly"),
     page("/contact", 0.6, "monthly"),
     page("/privacy", 0.2, "yearly"),

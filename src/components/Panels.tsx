@@ -1,12 +1,12 @@
 // Small illustrated UI panels for the work cards. Figures come from the real projects.
 
-const mini = "min-h-[186px] overflow-hidden rounded-[14px] border border-ink/10 bg-paper text-[0.85rem] shadow-[0_1px_2px_rgb(19_21_19/0.05)]";
+const mini = "min-h-[186px] overflow-hidden rounded-[14px] border border-ink/10 bg-paper text-[0.85rem] shadow-[0_1px_2px_rgb(20_33_61/0.05)]";
 const head = "flex items-center justify-between border-b border-ink/10 px-4 py-3 font-medium";
-const status = "inline-flex items-center gap-1.5 text-[0.78rem] font-normal text-ink/60 before:size-1.5 before:rounded-full before:bg-pine before:content-['']";
+const status = "inline-flex items-center gap-1.5 text-[0.78rem] font-normal text-ink/60 before:size-1.5 before:rounded-full before:bg-accent before:content-['']";
 const row = "flex items-center gap-3.5 border-b border-ink/10 px-4 py-2.5 last:border-b-0";
 const pill = "shrink-0 rounded-full border border-ink/20 px-2 py-0.5 text-[0.74rem]";
-const pillDark = "shrink-0 rounded-full border border-pine bg-pine px-2 py-0.5 text-[0.74rem] text-paper";
-const mark = "rounded-[3px] bg-mint px-1";
+const pillDark = "shrink-0 rounded-full border border-accent bg-accent px-2 py-0.5 text-[0.74rem] text-paper";
+const mark = "rounded-[3px] bg-band px-1";
 
 export function AiCoachPanel() {
   return (
@@ -42,7 +42,7 @@ function Meter({ label, width, value, before }: { label: string; width: string; 
     <div className="grid grid-cols-[5.5rem_1fr_3.2rem] items-center gap-3 border-b border-ink/10 px-4 py-2.5 last:border-b-0">
       <span className="text-ink/60">{label}</span>
       <span className="relative h-1 rounded bg-ink/10">
-        <i className={`absolute inset-y-0 left-0 rounded ${before ? "bg-ink/25" : "bg-pine"}`} style={{ width }} />
+        <i className={`absolute inset-y-0 left-0 rounded ${before ? "bg-ink/25" : "bg-accent"}`} style={{ width }} />
       </span>
       <span className="text-right tabular-nums">{value}</span>
     </div>

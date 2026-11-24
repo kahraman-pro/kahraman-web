@@ -39,7 +39,7 @@ export function StoreButtons({ links, appName }: { links: StoreLinks; appName: s
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${appName} on ${name}`}
-            className={`${base} cursor-pointer border-ink bg-ink text-paper hover:border-pine hover:bg-pine`}
+            className={`${base} cursor-pointer border-ink bg-ink text-paper hover:border-accent hover:bg-accent`}
           >
             {content}
           </a>

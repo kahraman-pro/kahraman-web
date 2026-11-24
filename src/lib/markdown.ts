@@ -69,12 +69,27 @@ const workIndex = () => `# Work
 ${projects.map((p) => `## [${p.name}](${site.url}/work/${p.slug})\n${p.kind}, ${p.year}. ${p.summary}`).join("\n\n")}
 `;
 
+const blogPage = () => `# What I can do for your team
+
+I am one engineer who advises and builds. This page lists what I take on, how a project starts and how to reach me.
+
+## What I take on
+${services.map((s) => `- [${s.title.replace(/\.$/, "")}](${site.url}/services/${s.slug}): ${s.short}`).join("\n")}
+
+## How a project starts
+${steps.map((s) => `${s.when}. **${s.title}**: ${s.text}`).join("\n")}
+
+## Contact
+${contact()}
+`;
+
 export function markdownFor(path: string[] = []): string | undefined {
   const [a, b] = path;
   if (!a) return home();
   if (path.length === 1) {
     if (a === "about") return about();
     if (a === "contact") return contactPage();
+    if (a === "blog") return blogPage();
     if (a === "services") return servicesIndex();
     if (a === "work") return workIndex();
   }

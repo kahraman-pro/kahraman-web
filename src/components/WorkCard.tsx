@@ -21,7 +21,7 @@ export function WorkCard({ p, priority = false }: { p: Project; priority?: boole
             className="object-cover transition-transform duration-700 ease-soft group-hover:scale-[1.025]"
           />
         ) : (
-          <div className="absolute inset-0 flex flex-col justify-end bg-pine p-6 text-paper">
+          <div className="absolute inset-0 flex flex-col justify-end bg-accent p-6 text-paper">
             <strong className="max-w-[18ch] text-[clamp(1.5rem,3vw,2.3rem)] font-semibold leading-[1.1] tracking-[-0.035em]">
               15 brands, 3M monthly visits, 8 sites re-architected.
             </strong>
@@ -32,7 +32,7 @@ export function WorkCard({ p, priority = false }: { p: Project; priority?: boole
       <div className="flex items-start gap-4 px-3 pb-3 pt-5">
         <div className="min-w-0 flex-1">
           <div className="mb-2.5 flex flex-wrap items-center gap-2 text-[0.8125rem]">
-            <span className="rounded-md bg-mint px-2 py-0.5 font-medium text-ink">{p.kind}</span>
+            <span className="rounded-md bg-band px-2 py-0.5 font-medium text-ink">{p.kind}</span>
             <span className="tabular-nums text-ink/55">{p.year}</span>
           </div>
           <h3 className="mb-2 text-[1.4rem] font-semibold leading-[1.25] tracking-[-0.025em]">{p.name}</h3>

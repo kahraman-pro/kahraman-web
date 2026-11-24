@@ -64,7 +64,7 @@ export async function AppLegalPage({ doc, params }: { doc: LegalDoc } & AppParam
               href={`/${key}/${app.repo}`}
               aria-current={key === doc ? "page" : undefined}
               className={`cursor-pointer rounded-[9px] px-3.5 py-1.5 text-[0.85rem] transition-colors ${
-                key === doc ? "bg-ink text-paper" : "text-ink/70 hover:bg-mint-soft hover:text-ink"
+                key === doc ? "bg-ink text-paper" : "text-ink/70 hover:bg-band-soft hover:text-ink"
               }`}
             >
               {APP_LEGAL_DOCS[key].title}
@@ -77,7 +77,7 @@ export async function AppLegalPage({ doc, params }: { doc: LegalDoc } & AppParam
             <ol className="sticky top-24 flex flex-col gap-2 border-t border-ink/10 pt-4">
               {sections.map((s, i) => (
                 <li key={s.heading}>
-                  <a href={`#s-${i}`} className="block cursor-pointer py-0.5 text-[0.85rem] text-ink/60 transition-colors hover:text-pine">{s.heading}</a>
+                  <a href={`#s-${i}`} className="block cursor-pointer py-0.5 text-[0.85rem] text-ink/60 transition-colors hover:text-accent">{s.heading}</a>
                 </li>
               ))}
             </ol>

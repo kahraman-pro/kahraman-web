@@ -14,7 +14,7 @@ Audience: founders and managers of small and medium teams, Upwork clients checki
 
 THESIS: The category standard for a solo consultant, done with Linear/Vercel/Stripe finish: centred hero, figures, calm sections. Refuses the reference site's look: all-mint rounded cards, pill buttons, centred section heads, Geist.
 
-OWN-WORLD: Cool cream ground #f7f6f0, raised paper #fdfcf8, deeper mint #cfe3d9 used as wells and bands, mint-soft #e5efe9 for hover, green-black ink #131513, pine #2b4d41 for hover, focus, selection and small markers. Schibsted Grotesk throughout. Radius 12px controls, 20px cards. Hairline borders plus soft offset shadows. Authored SVG arrows.
+OWN-WORLD: Cool grey-green ground #f2f4f1, paper #fbfcfa, ledger-blue #c8d9ea used as wells and bands, soft blue #e2ebf4 for hover, navy ink #14213d, bordo #7a1f2e for hover, focus, selection and small markers. Onest throughout. Radius 12px controls, 20px cards. Hairline borders plus soft offset shadows. Authored SVG arrows. (Palette and font swapped 2026-11-24; layout unchanged.)
 
 STORY: Visitor sees what Mustafa does, the action, and hard numbers in one screen; then proof (case cards), services, the person, principles, numbers, process, and a mint close.
 

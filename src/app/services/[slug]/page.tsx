@@ -22,14 +22,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return pageMetadata({ title: s.title.replace(/\.$/, ""), description: s.metaDescription, path: `/services/${s.slug}` });
 }
 
-function Cards({ items, mint = false }: { items: { title: string; text: string }[]; mint?: boolean }) {
+function Cards({ items, band = false }: { items: { title: string; text: string }[]; band?: boolean }) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((c) => (
-        <div key={c.title} className={mint ? "rounded-[20px] bg-mint p-6 sm:p-7" : `${card} p-6 sm:p-7`}>
-          <span aria-hidden="true" className={`mb-5 block h-0.5 w-8 ${mint ? "bg-ink/70" : "bg-pine"}`} />
+        <div key={c.title} className={band ? "rounded-[20px] bg-band p-6 sm:p-7" : `${card} p-6 sm:p-7`}>
+          <span aria-hidden="true" className={`mb-5 block h-0.5 w-8 ${band ? "bg-ink/70" : "bg-accent"}`} />
           <h3 className="mb-2 text-[1.08rem] font-semibold leading-[1.3] tracking-[-0.02em]">{c.title}</h3>
-          <p className={`m-0 text-[0.95rem] ${mint ? "text-ink/75" : "text-ink/65"}`}>{c.text}</p>
+          <p className={`m-0 text-[0.95rem] ${band ? "text-ink/75" : "text-ink/65"}`}>{c.text}</p>
         </div>
       ))}
     </div>
@@ -87,7 +87,7 @@ export default async function ServicePage({ params }: Params) {
       <section className={section}>
         <div className={wrap}>
           <div className={splitHead}><h2 className={h2Split}>What I build.</h2><p className={headP}>{s.buildsLede}</p></div>
-          <Cards items={s.builds} mint />
+          <Cards items={s.builds} band />
         </div>
       </section>
 

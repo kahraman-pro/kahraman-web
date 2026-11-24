@@ -14,7 +14,7 @@ export function Contact({
   return (
     <section id="contact" className="pt-10 md:pt-16">
       <div className={wrap}>
-        <div className="relative overflow-hidden rounded-[28px] bg-mint px-6 py-20 text-center sm:px-10 md:py-28">
+        <div className="relative overflow-hidden rounded-[28px] bg-band px-6 py-20 text-center sm:px-10 md:py-28">
           <span aria-hidden="true" className="pointer-events-none absolute inset-3 rounded-[20px] border border-ink/10" />
           <h2 className={`${h2} relative mx-auto max-w-[14ch]`}>{title}</h2>
           <p className={`${lede} relative mx-auto mt-6 max-w-[46ch] text-ink/75`}>{text}</p>
@@ -30,10 +30,10 @@ export function Contact({
                     href={p.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex h-10 cursor-pointer items-center gap-1.5 rounded-[10px] border border-ink/12 bg-paper/70 px-3.5 text-[0.9rem] font-medium transition-colors hover:border-ink/30 hover:bg-paper hover:text-pine"
+                    className="group inline-flex h-10 cursor-pointer items-center gap-1.5 rounded-[10px] border border-ink/12 bg-paper/70 px-3.5 text-[0.9rem] font-medium transition-colors hover:border-ink/30 hover:bg-paper hover:text-accent"
                   >
                     {p.label}
-                    <ArrowUpRight className="size-3.5 text-ink/50 transition-transform duration-300 ease-soft group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-pine" />
+                    <ArrowUpRight className="size-3.5 text-ink/50 transition-transform duration-300 ease-soft group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
                   </a>
                 </li>
               ))}

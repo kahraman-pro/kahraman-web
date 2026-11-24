@@ -35,7 +35,7 @@ Visitors come from search, LinkedIn, GitHub and Upwork, usually comparing severa
 - Voice: plain, direct, first person, outcome first; no hype; stack names only as supporting detail.
 - All copy stays as written (user requirement for the 2026-11 redesign).
 - Layout preference (2026-11-24): the category standard (centred hero, figures, clear sections), executed at the craft level of Linear, Vercel and Stripe. Originality comes from type, tone, component and section design, not from an unusual concept.
-- Palette family kept: cream ground, soft mint, near-black ink. Tones may shift and one related tone may be added; the result must not be a copy of the reference site it came from (borandabak.com).
+- Palette and type (2026-11-24, replaces cream and mint): cool grey-green ground #f2f4f1, paper #fbfcfa, ledger-blue bands #c8d9ea (soft #e2ebf4), navy ink #14213d, bordo accent #7a1f2e for hover, focus and small markers. Font: Onest. Layout and copy unchanged. Theme variables live in `src/app/globals.css` (`bg`, `paper`, `band`, `band-soft`, `ink`, `accent`).
 
 ## Evidence on Hand
 

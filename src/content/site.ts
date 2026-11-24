@@ -40,6 +40,7 @@ export const ctaLabel = () =>
 export const nav = [
   { href: "/services", label: "Services" },
   { href: "/work", label: "My work" },
+  { href: "/blog", label: "Blog" },
   { href: "/#results", label: "Results" },
   { href: "/#process", label: "Process" },
   { href: "/about", label: "About" },

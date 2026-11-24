@@ -142,7 +142,7 @@ export default function Home() {
         <div className={wrap}>
           <div className="grid gap-10 md:grid-cols-[minmax(0,280px)_minmax(0,1fr)] md:gap-14 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] lg:gap-20">
             <figure className="m-0 max-w-[240px] self-start md:sticky md:top-28 md:max-w-none">
-              <div className="rounded-[24px] bg-mint p-2.5">
+              <div className="rounded-[24px] bg-band p-2.5">
                 <Image
                   src="/brand/mustafa-kahraman.webp"
                   alt="Mustafa Kahraman smiling on a wooden balcony at sunset"
@@ -194,7 +194,7 @@ export default function Home() {
           <div className={centerHead}><h2 className={h2}>Advice, then the build.</h2></div>
           <div className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
             {principles.map((p) => (
-              <div key={p.title} className="relative border-t border-ink/12 pt-6 before:absolute before:-top-px before:left-0 before:h-0.5 before:w-10 before:bg-pine before:content-['']">
+              <div key={p.title} className="relative border-t border-ink/12 pt-6 before:absolute before:-top-px before:left-0 before:h-0.5 before:w-10 before:bg-accent before:content-['']">
                 <h3 className="mb-2.5 text-[1.08rem] font-semibold tracking-[-0.02em]">{p.title}</h3>
                 <p className="m-0 text-[0.95rem] text-ink/65">{p.text}</p>
               </div>
@@ -212,7 +212,7 @@ export default function Home() {
               <div key={r.value} className={`flex flex-col p-7 lg:p-9 ${i ? "border-t border-ink/10 md:border-l md:border-t-0" : ""}`}>
                 <strong className="mb-5 block text-[clamp(2rem,3.4vw,2.75rem)] font-semibold leading-[1.05] tracking-[-0.04em]">{r.value}</strong>
                 <p className="mb-6 text-[1.02rem] leading-[1.6] text-ink/80">{r.text}</p>
-                <span className="mt-auto inline-flex items-center gap-2 text-[0.8125rem] text-pine before:size-1.5 before:rounded-full before:bg-pine before:content-['']">{r.who}</span>
+                <span className="mt-auto inline-flex items-center gap-2 text-[0.8125rem] text-accent before:size-1.5 before:rounded-full before:bg-accent before:content-['']">{r.who}</span>
               </div>
             ))}
           </div>
@@ -227,8 +227,8 @@ export default function Home() {
             {steps.map((s, i) => (
               <li key={s.when} className={`${card} relative flex flex-col p-6`}>
                 <div className="mb-6 flex items-center gap-3">
-                  <span className="rounded-md bg-mint px-2 py-0.5 text-[0.8125rem] font-medium">{s.when}</span>
-                  {i < steps.length - 1 && <span aria-hidden="true" className="hidden h-px flex-1 lg:block bg-[repeating-linear-gradient(90deg,rgb(19_21_19/0.2)_0_4px,transparent_4px_8px)]" />}
+                  <span className="rounded-md bg-band px-2 py-0.5 text-[0.8125rem] font-medium">{s.when}</span>
+                  {i < steps.length - 1 && <span aria-hidden="true" className="hidden h-px flex-1 lg:block bg-[repeating-linear-gradient(90deg,rgb(20_33_61/0.2)_0_4px,transparent_4px_8px)]" />}
                 </div>
                 <h3 className={`${h3} mb-2`}>{s.title}</h3>
                 <p className="text-[0.95rem] text-ink/65">{s.text}</p>
@@ -251,7 +251,7 @@ function CaseCard({ c, wide = false }: { c: (typeof cases)[number]; wide?: boole
         wide ? "lg:col-span-2 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-center" : ""
       }`}
     >
-      <div className={`rounded-[14px] bg-mint p-4 sm:p-5 ${wide ? "lg:order-2 lg:p-8" : ""}`}>{c.panel}</div>
+      <div className={`rounded-[14px] bg-band p-4 sm:p-5 ${wide ? "lg:order-2 lg:p-8" : ""}`}>{c.panel}</div>
       <div className={`px-3 pb-3 pt-6 ${wide ? "lg:px-8 lg:py-8" : ""}`}>
         <div className="mb-3 flex items-center gap-2.5 text-[0.875rem]">
           <b className="font-semibold">{c.who}</b>

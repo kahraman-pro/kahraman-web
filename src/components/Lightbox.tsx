@@ -59,7 +59,7 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
       {showGallery && images.length > 0 && (
         <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-5">
           {images.map((img, i) => (
-            <figure key={img.src} className="m-0 rounded-[18px] bg-mint p-2 sm:p-2.5">
+            <figure key={img.src} className="m-0 rounded-[18px] bg-band p-2 sm:p-2.5">
               <button
                 type="button"
                 onClick={() => setIndex(i + offset)}

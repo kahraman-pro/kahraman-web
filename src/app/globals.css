@@ -1,14 +1,29 @@
 @import "tailwindcss";
 
+/* "Antetli Mektup": one bond-white sheet on an envelope-grey ground, fountain-pen ink, one postmark red. */
 @theme {
-  --color-bg: #f2f4f1;
-  --color-paper: #fbfcfa;
-  --color-band: #c8d9ea;
-  --color-band-soft: #e2ebf4;
-  --color-ink: #14213d;
-  --color-accent: #7a1f2e;
-  --font-sans: var(--font-onest), "Helvetica Neue", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --color-envelope: #eceff3;
+  --color-paper: #fcfcfb;
+  --color-wash: #eef2f8;
+  --color-ink: #1c2f6e;
+  --color-ink-deep: #14235a;
+  --color-stamp: #c23a2b;
+  --font-sans: var(--font-schibsted), "Helvetica Neue", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: var(--font-young-serif), Georgia, "Times New Roman", serif;
   --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
-  --shadow-card: 0 1px 2px rgb(20 33 61 / 0.04), 0 12px 32px -16px rgb(20 33 61 / 0.14);
-  --shadow-lift: 0 2px 4px rgb(20 33 61 / 0.05), 0 24px 48px -20px rgb(20 33 61 / 0.22);
+  --shadow-sheet: 0 1px 0 rgb(28 47 110 / 0.06), 0 40px 80px -52px rgb(28 47 110 / 0.4);
+  --animate-stamp: stamp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+
+  @keyframes stamp {
+    from {
+      opacity: 0;
+      transform: rotate(-12deg) scale(1.35);
+      filter: blur(3px);
+    }
+    to {
+      opacity: 0.82;
+      transform: rotate(-12deg) scale(1);
+      filter: blur(0);
+    }
+  }
 }

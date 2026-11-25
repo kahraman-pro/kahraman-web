@@ -6,9 +6,9 @@ export const contentType = "image/png";
 export default function AppleIcon() {
   return new ImageResponse(
     (
-      <div tw="flex h-full w-full items-center justify-center bg-[#14213d]">
+      <div tw="flex h-full w-full items-center justify-center bg-[#1c2f6e]">
         <svg width="118" height="79" viewBox="0 0 260 174">
-          <g fill="none" stroke="#c8d9ea" strokeWidth="25" strokeLinejoin="miter" strokeMiterlimit="10">
+          <g fill="none" stroke="#fcfcfb" strokeWidth="25" strokeLinejoin="miter" strokeMiterlimit="10">
             <path d="M12.5 174V12L77 104L140.5 12V174" />
             <path d="M140.5 118L250 12" />
             <path d="M178 82L262 174" />

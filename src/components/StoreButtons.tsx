@@ -16,7 +16,7 @@ const STORES = [
   },
 ];
 
-const base = "inline-flex min-h-[54px] items-center gap-3 rounded-xl border px-4 text-left leading-none transition-colors";
+const base = "inline-flex min-h-[54px] items-center gap-3 rounded-[10px] border px-4 text-left leading-none transition-colors";
 
 export function StoreButtons({ links, appName }: { links: StoreLinks; appName: string }) {
   return (
@@ -27,7 +27,7 @@ export function StoreButtons({ links, appName }: { links: StoreLinks; appName: s
           <>
             <svg viewBox="0 0 24 24" className="size-6 flex-none" fill="currentColor" aria-hidden="true"><path d={path} /></svg>
             <span className="flex flex-col gap-1.5">
-              <span className="text-[0.68rem] uppercase tracking-[0.08em] opacity-70">{href ? action : "Coming soon on"}</span>
+              <span className="text-[0.72rem] opacity-75">{href ? action : "Coming soon on"}</span>
               <span className="text-[1rem] font-medium tracking-[-0.01em]">{name}</span>
             </span>
           </>
@@ -39,12 +39,12 @@ export function StoreButtons({ links, appName }: { links: StoreLinks; appName: s
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${appName} on ${name}`}
-            className={`${base} cursor-pointer border-ink bg-ink text-paper hover:border-accent hover:bg-accent`}
+            className={`${base} cursor-pointer border-ink bg-ink text-paper hover:border-ink-deep hover:bg-ink-deep focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-stamp`}
           >
             {content}
           </a>
         ) : (
-          <span key={key} role="link" aria-disabled="true" aria-label={`${appName} on ${name}, coming soon`} className={`${base} cursor-not-allowed border-ink/15 text-ink/45`}>
+          <span key={key} role="link" aria-disabled="true" aria-label={`${appName} on ${name}, coming soon`} className={`${base} cursor-not-allowed border-ink/20 text-ink/60`}>
             {content}
           </span>
         );

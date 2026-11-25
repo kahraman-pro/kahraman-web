@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-25T22:44:32+00:00",
+  "title": "Design System: Mustafa Kahraman",
+  "extensions": {
+    "colorMeta": {
+      "envelope": {
+        "role": "neutral",
+        "displayName": "Envelope Grey",
+        "canonical": "#eceff3",
+        "tonalRamp": [
+          "#090b0e",
+          "#222427",
+          "#3e4043",
+          "#5b5e61",
+          "#7e8084",
+          "#a2a5a8",
+          "#c8cbcf",
+          "#eceff3"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Bond White",
+        "canonical": "#fcfcfb",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242423",
+          "#40403f",
+          "#5e5e5d",
+          "#80807f",
+          "#a4a4a4",
+          "#cacac9",
+          "#fcfcfb"
+        ]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Blotting Wash",
+        "canonical": "#eef2f8",
+        "tonalRamp": [
+          "#090b0f",
+          "#212429",
+          "#3d4045",
+          "#5a5e63",
+          "#7d8086",
+          "#a1a5aa",
+          "#c7cbd1",
+          "#eef2f8"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Fountain-Pen Ink",
+        "canonical": "#1c2f6e",
+        "tonalRamp": [
+          "#040920",
+          "#152145",
+          "#2c3d6c",
+          "#445a97",
+          "#647dbf",
+          "#8da3db",
+          "#b7caf8",
+          "#dfeeff"
+        ]
+      },
+      "ink-deep": {
+        "role": "primary",
+        "displayName": "Deep Ink",
+        "canonical": "#14235a",
+        "tonalRamp": [
+          "#04091e",
+          "#172241",
+          "#2e3d68",
+          "#475b91",
+          "#687eb9",
+          "#8fa3d6",
+          "#b9caf3",
+          "#e1eeff"
+        ]
+      },
+      "stamp": {
+        "role": "secondary",
+        "displayName": "Postmark Red",
+        "canonical": "#c23a2b",
+        "tonalRamp": [
+          "#240000",
+          "#4b0100",
+          "#76160d",
+          "#a42c1f",
+          "#cf5141",
+          "#ed8271",
+          "#ffb0a2",
+          "#ffdbcf"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The home letterhead's one sentence."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Full-width section heads and the signed close; inner-page heroes use clamp(2.3rem, 4.6vw, 3.6rem)."
+      },
+      "headline-margin": {
+        "displayName": "Headline, margin",
+        "purpose": "Headings in the left margin column of margin-head sections."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Plain figures in the ruled figure row and result statements."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Item headings in lists, principles and process steps."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Paragraph under a display or headline, ink 80%, 1.125rem below md."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running prose, ink 80%, max 62ch, 1.05rem below md."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Captions, breadcrumbs, source and role lines, footer; sentence case, ink 70 to 75%."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Button labels at weight 500."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet",
+        "value": "0 1px 0 rgb(28 47 110 / 0.06), 0 40px 80px -52px rgb(28 47 110 / 0.4)",
+        "purpose": "The letter sheet only; the single source of depth."
+      },
+      {
+        "name": "highlighter-underline",
+        "value": "inset 0 -1px 0 rgb(28 47 110 / 0.25)",
+        "purpose": "Marker stroke under highlighted phrases inside illustration panels; not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-soft",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "All state transitions: colour 300ms, header mark 500ms, image scale 500 to 700ms."
+      },
+      {
+        "name": "stamp",
+        "value": "stamp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both",
+        "purpose": "The postmark's one-time arrival on the home letterhead, from scale 1.35 and 3px blur to 0.82 opacity at -12deg; motion-safe only."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      },
+      {
+        "name": "sheet-max",
+        "value": "1296px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one ink-filled reply button: header, hero and signed close.",
+      "html": "<button class=\"ds-btn-primary\">Get in touch <span class=\"ds-btn-primary-icon\"><svg viewBox=\"0 0 20 20\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M3.5 10h12M11 5.5 15.5 10 11 14.5\"/></svg></span></button>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; justify-content:center; gap:10px; white-space:nowrap; border-radius:10px; font-family:var(--font-sans, 'Schibsted Grotesk', 'Helvetica Neue', system-ui, sans-serif); font-weight:500; cursor:pointer; transition:background-color 300ms cubic-bezier(0.22, 1, 0.36, 1), border-color 300ms cubic-bezier(0.22, 1, 0.36, 1), color 300ms cubic-bezier(0.22, 1, 0.36, 1); height:48px; padding:0 20px; font-size:1rem; background:var(--color-ink, #1c2f6e); color:var(--color-paper, #fcfcfb); border:none; } .ds-btn-primary:hover { background:var(--color-ink-deep, #14235a); } .ds-btn-primary:focus-visible { outline:2px solid var(--color-stamp, #c23a2b); outline-offset:3px; } .ds-btn-primary:active { transform:translateY(1px); } .ds-btn-primary-icon { display:inline-flex; transition:transform 300ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-primary:hover .ds-btn-primary-icon { transform:translateX(2px); }"
+    },
+    {
+      "name": "Primary Button, small",
+      "kind": "button",
+      "refersTo": "button-primary-sm",
+      "description": "The header's reply button, 40px tall.",
+      "html": "<button class=\"ds-btn-primary-sm\">Book a call</button>",
+      "css": ".ds-btn-primary-sm { display:inline-flex; align-items:center; justify-content:center; gap:10px; white-space:nowrap; border-radius:10px; font-family:var(--font-sans, 'Schibsted Grotesk', 'Helvetica Neue', system-ui, sans-serif); font-weight:500; cursor:pointer; transition:background-color 300ms cubic-bezier(0.22, 1, 0.36, 1), border-color 300ms cubic-bezier(0.22, 1, 0.36, 1), color 300ms cubic-bezier(0.22, 1, 0.36, 1); height:40px; padding:0 16px; font-size:0.9rem; background:var(--color-ink, #1c2f6e); color:var(--color-paper, #fcfcfb); border:none; } .ds-btn-primary-sm:hover { background:var(--color-ink-deep, #14235a); } .ds-btn-primary-sm:focus-visible { outline:2px solid var(--color-stamp, #c23a2b); outline-offset:3px; } .ds-btn-primary-sm:active { transform:translateY(1px); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action on paper with an ink hairline; fills with wash on hover.",
+      "html": "<button class=\"ds-btn-ghost\">See all my work</button>",
+      "css": ".ds-btn-ghost { display:inline-flex; align-items:center; justify-content:center; gap:10px; white-space:nowrap; border-radius:10px; font-family:var(--font-sans, 'Schibsted Grotesk', 'Helvetica Neue', system-ui, sans-serif); font-weight:500; cursor:pointer; transition:background-color 300ms cubic-bezier(0.22, 1, 0.36, 1), border-color 300ms cubic-bezier(0.22, 1, 0.36, 1), color 300ms cubic-bezier(0.22, 1, 0.36, 1); height:48px; padding:0 20px; font-size:1rem; background:var(--color-paper, #fcfcfb); color:var(--color-ink, #1c2f6e); border:1px solid rgb(28 47 110 / 0.2); } .ds-btn-ghost:hover { background:var(--color-wash, #eef2f8); border-color:rgb(28 47 110 / 0.45); } .ds-btn-ghost:focus-visible { outline:2px solid var(--color-stamp, #c23a2b); outline-offset:3px; } .ds-btn-ghost:active { transform:translateY(1px); }"
+    },
+    {
+      "name": "Copy Email Field",
+      "kind": "input",
+      "refersTo": "button-ghost",
+      "description": "Outlined 48px field holding the mailto link and an inner wash Copy button; the site has no text inputs.",
+      "html": "<span class=\"ds-copy\"><a class=\"ds-copy-link\" href=\"#\">hello@example.com</a><button class=\"ds-copy-btn\" type=\"button\">Copy</button></span>",
+      "css": ".ds-copy { display:inline-flex; align-items:center; gap:4px; height:48px; padding:0 6px 0 16px; border:1px solid rgb(28 47 110 / 0.2); border-radius:10px; font-family:var(--font-sans, 'Schibsted Grotesk', 'Helvetica Neue', system-ui, sans-serif); color:var(--color-ink, #1c2f6e); background:var(--color-paper, #fcfcfb); } .ds-copy-link { padding-right:8px; font-weight:500; color:var(--color-ink, #1c2f6e); text-decoration:underline; text-decoration-color:rgb(28 47 110 / 0.25); text-underline-offset:0.22em; transition:text-decoration-color 150ms; } .ds-copy-link:hover { text-decoration-color:var(--color-ink, #1c2f6e); } .ds-copy-btn { height:36px; min-width:4.25rem; padding:0 12px; border:none; border-radius:7px; background:var(--color-wash, #eef2f8); color:rgb(28 47 110 / 0.8); font-family:var(--font-sans, 'Schibsted Grotesk', 'Helvetica Neue', system-ui, sans-serif); font-size:0.85rem; font-weight:500; cursor:pointer; transition:background-color 150ms, color 150ms; } .ds-copy-btn:hover { background:rgb(28 47 110 / 0.1); color:var(--color-ink, #1c2f6e); } .ds-copy-btn:focus-visible { outline:2px solid var(--color-stamp, #c23a2b); outline-offset:2px; } .ds-copy-btn:active { background:var(--color-ink, #1c2f6e); color:var(--color-paper, #fcfcfb); }"
+    },
+    {
+      "name": "Header Strip",
+      "kind": "nav",
+      "refersTo": "sheet",
+      "description": "Sticky paper strip at the top of the sheet: monogram and name, section links, About and the small reply button.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-brand\" href=\"#\"><svg viewBox=\"0 0 275 186\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"25\" aria-hidden=\"true\"><path d=\"M12.5 174V12L77 104L140.5 12V174\"/><path d=\"M140.5 118L250 12\"/><path d=\"M178 82L262 174\"/></svg><span>Mustafa Kahraman</span></a><nav class=\"ds-nav-links\"><a href=\"#\" aria-current=\"page\">Services</a><a href=\"#\">My work</a><a href=\"#\">Blog</a></nav><div class=\"ds-nav-end\"><a href=\"#\">About</a><button class=\"ds-nav-btn\">Get in touch</button></div></header>",
+      "css": ".ds-nav { display:flex; align-items:center; height:76px; padding:0 56px; background:var(--color-paper, #fcfcfb); border-bottom:1px solid rgb(28 47 110 / 0.12); border-radius:6px 6px 0 0; font-family:var(--font-sans, 'Schibsted Grotesk', 'Helvetica Neue', system-ui, sans-serif); font-size:0.95rem; color:rgb(28 47 110 / 0.75); } .ds-nav-brand { display:flex; align-items:center; gap:12px; margin-right:16px; color:var(--color-ink, #1c2f6e); text-decoration:none; font-family:var(--font-serif, 'Young Serif', Georgia, serif); font-size:1.05rem; line-height:1; transition:opacity 500ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-nav-brand:hover { opacity:0.7; } .ds-nav-links, .ds-nav-end { display:flex; align-items:center; gap:4px; } .ds-nav-end { margin-left:auto; gap:12px; } .ds-nav a:not(.ds-nav-brand) { position:relative; padding:8px 12px; border-radius:6px; color:inherit; text-decoration:none; transition:color 150ms; } .ds-nav a:not(.ds-nav-brand):hover { color:var(--color-ink, #1c2f6e); } .ds-nav a:focus-visible { outline:2px solid var(--color-stamp, #c23a2b); outline-offset:1px; } .ds-nav a[aria-current=page] { color:var(--color-ink, #1c2f6e); } .ds-nav a[aria-current=page]::after { content:''; position:absolute; left:12px; right:12px; bottom:4px; height:1px; background:var(--color-ink, #1c2f6e); } .ds-nav-btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; white-space:nowrap; border-radius:10px; font-family:var(--font-sans, 'Schibsted Grotesk', 'Helvetica Neue', system-ui, sans-serif); font-weight:500; cursor:pointer; transition:background-color 300ms cubic-bezier(0.22, 1, 0.36, 1), border-color 300ms cubic-bezier(0.22, 1, 0.36, 1), color 300ms cubic-bezier(0.22, 1, 0.36, 1); height:40px; padding:0 16px; font-size:0.9rem; background:var(--color-ink, #1c2f6e); color:var(--color-paper, #fcfcfb); border:none; } .ds-nav-btn:hover { background:var(--color-ink-deep, #14235a); } .ds-nav-btn:focus-visible { outline:2px solid var(--color-stamp, #c23a2b); outline-offset:3px; }"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Static hairline tag for capabilities and stacks.",
+      "html": "<ul class=\"ds-chips\"><li class=\"ds-chip\">Web apps and SaaS</li><li class=\"ds-chip\">AI agents and LLM features</li><li class=\"ds-chip\">MCP servers</li></ul>",
+      "css": ".ds-chips { display:flex; flex-wrap:wrap; gap:8px; list-style:none; margin:0; padding:0; } .ds-chip { border:1px solid rgb(28 47 110 / 0.15); border-radius:6px; padding:4px 10px; font-family:var(--font-sans, 'Schibsted Grotesk', 'Helvetica Neue', system-ui, sans-serif); font-size:0.85rem; color:rgb(28 47 110 / 0.8); }"
+    },
+    {
+      "name": "Enclosure Card",
+      "kind": "card",
+      "refersTo": "card-enclosure",
+      "description": "Work card: a smaller hairline sheet, picture first, then meta, serif title and summary, with an arrow circle.",
+      "html": "<a class=\"ds-card\" href=\"#\"><div class=\"ds-card-img\"><strong>15 brands, 3M monthly visits.</strong></div><div class=\"ds-card-body\"><div><div class=\"ds-card-meta\"><b>Integrations</b> <span aria-hidden=\"true\">·</span> 2024</div><h3 class=\"ds-card-title\">Retail e-commerce</h3><p class=\"ds-card-text\">Stores, integrations and migrations for 15 retail brands.</p></div><span class=\"ds-card-arrow\"><svg viewBox=\"0 0 20 20\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M6 14 14 6M7.5 6H14v6.5\"/></svg></span></div></a>",
+      "css": ".ds-card { display:flex; flex-direction:column; max-width:420px; padding:10px; background:var(--color-paper, #fcfcfb); border:1px solid rgb(28 47 110 / 0.15); border-radius:8px; color:var(--color-ink, #1c2f6e); text-decoration:none; font-family:var(--font-sans, 'Schibsted Grotesk', 'Helvetica Neue', system-ui, sans-serif); transition:border-color 300ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-card:hover { border-color:rgb(28 47 110 / 0.4); } .ds-card:focus-visible { outline:2px solid var(--color-stamp, #c23a2b); outline-offset:3px; } .ds-card-img { aspect-ratio:16/10; border-radius:5px; background:var(--color-ink, #1c2f6e); color:var(--color-paper, #fcfcfb); display:flex; align-items:flex-end; padding:24px; font-family:var(--font-serif, 'Young Serif', Georgia, serif); font-size:1.6rem; line-height:1.1; letter-spacing:-0.02em; } .ds-card-img strong { font-weight:400; } .ds-card-body { display:flex; align-items:flex-start; gap:16px; padding:20px 12px 12px; } .ds-card-meta { margin-bottom:8px; font-size:0.85rem; color:rgb(28 47 110 / 0.75); } .ds-card-meta b { font-weight:500; color:var(--color-ink, #1c2f6e); } .ds-card-meta span { color:rgb(28 47 110 / 0.35); } .ds-card-title { margin:0 0 8px; font-family:var(--font-serif, 'Young Serif', Georgia, serif); font-weight:400; font-size:1.5rem; line-height:1.2; letter-spacing:-0.015em; } .ds-card-text { margin:0; font-size:0.975rem; color:rgb(28 47 110 / 0.75); } .ds-card-arrow { flex:none; display:flex; align-items:center; justify-content:center; width:36px; height:36px; margin-top:4px; border-radius:9999px; border:1px solid rgb(28 47 110 / 0.2); color:rgb(28 47 110 / 0.7); transition:background-color 300ms cubic-bezier(0.22, 1, 0.36, 1), border-color 300ms cubic-bezier(0.22, 1, 0.36, 1), color 300ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-card:hover .ds-card-arrow { background:var(--color-ink, #1c2f6e); border-color:var(--color-ink, #1c2f6e); color:var(--color-paper, #fcfcfb); }"
+    },
+    {
+      "name": "Ruled Service Row",
+      "kind": "custom",
+      "refersTo": "arrow-circle",
+      "description": "Services as an itemised, ruled list; wash fill bleeds past the rules on hover.",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\"><span class=\"ds-row-fill\" aria-hidden=\"true\"></span><h3 class=\"ds-row-title\">AI agents and LLM features</h3><p class=\"ds-row-text\">Assistants that answer from your own data, with a person confirming every action.</p><span class=\"ds-row-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 20 20\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M3.5 10h12M11 5.5 15.5 10 11 14.5\"/></svg></span></a></li><li><a class=\"ds-row\" href=\"#\"><span class=\"ds-row-fill\" aria-hidden=\"true\"></span><h3 class=\"ds-row-title\">Integrations and automation</h3><p class=\"ds-row-text\">Systems that keep each other in sync without a developer.</p><span class=\"ds-row-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 20 20\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M3.5 10h12M11 5.5 15.5 10 11 14.5\"/></svg></span></a></li></ul>",
+      "css": ".ds-rows { list-style:none; margin:0; padding:0 16px; border-top:1px solid rgb(28 47 110 / 0.15); font-family:var(--font-sans, 'Schibsted Grotesk', 'Helvetica Neue', system-ui, sans-serif); color:var(--color-ink, #1c2f6e); } .ds-rows li { border-bottom:1px solid rgb(28 47 110 / 0.15); } .ds-row { position:relative; isolation:isolate; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); gap:40px; padding:28px 56px 28px 0; color:inherit; text-decoration:none; } .ds-row:focus-visible { outline:2px solid var(--color-stamp, #c23a2b); outline-offset:2px; } .ds-row-fill { position:absolute; left:-16px; right:-16px; top:6px; bottom:6px; z-index:-1; border-radius:8px; background:var(--color-wash, #eef2f8); opacity:0; transition:opacity 300ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-row:hover .ds-row-fill { opacity:1; } .ds-row-title { margin:0; font-family:var(--font-serif, 'Young Serif', Georgia, serif); font-weight:400; font-size:1.4rem; line-height:1.25; letter-spacing:-0.012em; } .ds-row-text { margin:0; color:rgb(28 47 110 / 0.75); } .ds-row-arrow { position:absolute; right:0; top:28px; display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:9999px; border:1px solid rgb(28 47 110 / 0.2); background:var(--color-paper, #fcfcfb); color:rgb(28 47 110 / 0.7); transition:background-color 300ms cubic-bezier(0.22, 1, 0.36, 1), border-color 300ms cubic-bezier(0.22, 1, 0.36, 1), color 300ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-row-arrow svg { transition:transform 300ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-row:hover .ds-row-arrow { background:var(--color-ink, #1c2f6e); border-color:var(--color-ink, #1c2f6e); color:var(--color-paper, #fcfcfb); } .ds-row:hover .ds-row-arrow svg { transform:translateX(2px); }"
+    },
+    {
+      "name": "Ruled Figure Row with Postmark",
+      "kind": "custom",
+      "refersTo": "sheet",
+      "description": "The letterhead's plain figures on hairlines, with the red postmark stamped over the right end once on load.",
+      "html": "<div class=\"ds-figs\"><svg class=\"ds-postmark\" viewBox=\"0 0 210 140\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\"><circle cx=\"145\" cy=\"70\" r=\"62\" stroke-width=\"3\"/><circle cx=\"145\" cy=\"70\" r=\"33\" stroke-width=\"1.5\"/><path stroke-width=\"2.5\" d=\"M4 46 q 9 -7 18 0 t 18 0 t 18 0 t 18 0 t 18 0\"/><path stroke-width=\"2.5\" d=\"M4 58 q 9 -7 18 0 t 18 0 t 18 0 t 18 0 t 18 0\"/><path stroke-width=\"2.5\" d=\"M4 70 q 9 -7 18 0 t 18 0 t 18 0 t 18 0 t 18 0\"/><path stroke-width=\"2.5\" d=\"M4 82 q 9 -7 18 0 t 18 0 t 18 0 t 18 0 t 18 0\"/><path stroke-width=\"2.5\" d=\"M4 94 q 9 -7 18 0 t 18 0 t 18 0 t 18 0 t 18 0\"/></g><g transform=\"translate(127 58) scale(0.14)\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"25\"><path d=\"M12.5 174V12L77 104L140.5 12V174\"/><path d=\"M140.5 118L250 12\"/><path d=\"M178 82L262 174\"/></g></svg><ul class=\"ds-figs-list\"><li><strong>15+</strong><span>brands built for</span></li><li><strong>3M</strong><span>monthly visits served</span></li><li><strong>1.5 s</strong><span>LCP, down from 3.8 s</span></li><li><strong>2021</strong><span>building software since</span></li></ul></div>",
+      "css": ".ds-figs { position:relative; max-width:1080px; padding-top:96px; font-family:var(--font-sans, 'Schibsted Grotesk', 'Helvetica Neue', system-ui, sans-serif); color:var(--color-ink, #1c2f6e); background:var(--color-paper, #fcfcfb); } .ds-postmark { position:absolute; right:0; top:0; width:170px; color:var(--color-stamp, #c23a2b); opacity:0.82; mix-blend-mode:multiply; transform:rotate(-12deg); pointer-events:none; } @media (prefers-reduced-motion: no-preference) { .ds-postmark { animation:ds-stamp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both; } } @keyframes ds-stamp { from { opacity:0; transform:rotate(-12deg) scale(1.35); filter:blur(3px); } to { opacity:0.82; transform:rotate(-12deg) scale(1); filter:blur(0); } } .ds-figs-list { display:grid; grid-template-columns:repeat(4, 1fr); list-style:none; margin:0; padding:0; border-top:1px solid rgb(28 47 110 / 0.15); text-align:left; } .ds-figs-list li { display:flex; flex-direction:column; gap:8px; padding:28px 16px 28px 28px; border-left:1px solid rgb(28 47 110 / 0.15); } .ds-figs-list li:first-child { padding-left:0; border-left:none; } .ds-figs-list strong { font-family:var(--font-serif, 'Young Serif', Georgia, serif); font-weight:400; font-size:3rem; line-height:1; letter-spacing:-0.025em; } .ds-figs-list span { font-size:0.9rem; line-height:1.375; color:rgb(28 47 110 / 0.75); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Personal Letter",
+    "overview": "The site is one letter written by one person. A single long bond-white sheet lies on a cool envelope-grey ground; everything that matters is written on that sheet in one fountain-pen blue, and the only other colour is the red of a postmark. It opens with a centred letterhead (monogram, name, role, a short hairline), speaks in the first person, lists its figures plainly on ruled lines, and ends with a signed close. The mood is calm, direct and personal: one person writing, not an agency presenting.\n\nDensity is generous and quiet. Hierarchy comes from size and space, not weight or colour: the serif has one weight, the ink has one hue, and structure is drawn with hairline ink rules rather than boxes. Sections set their heading in the letter's left margin and their content in the body column, the way a letter or a printed report sets marginal heads.\n\nThe system rejects the agency template (a floating translucent nav bar, rows of cards under soft shadows) and the previous ledger-blue and bordo look set in Onest. Depth exists exactly once, under the sheet.",
+    "keyCharacteristics": [
+      "One paper sheet (6px corners) on an envelope ground; the footer sits outside the sheet, on the envelope.",
+      "One ink for type, logo, rules and the one filled button; red only as the postmark, focus rings and tiny markers.",
+      "Young Serif for headings, figures and the name; Schibsted Grotesk for everything else.",
+      "Hairline ink rules at 15% build lists, figure rows and statements; no nested boxes.",
+      "10px controls, 8px enclosures, circular arrow buttons.",
+      "One authored motion moment (the postmark stamping in); everything else is colour, underline and small translation transitions."
+    ],
+    "rules": [
+      {
+        "name": "The One Ink Rule",
+        "body": "Every piece of type, rule and fill is the ink at some alpha. Readable secondary text never drops below ink at 70%; lower alphas (30 to 35%) are reserved for aria-hidden separators such as breadcrumb slashes and middle dots.",
+        "section": "colors"
+      },
+      {
+        "name": "The Postmark Rule",
+        "body": "Red is a stamp, not an accent. It appears as the postmark, focus rings and dot or dash markers no larger than 6px. Never red text, red buttons, red headings or red fills.",
+        "section": "colors"
+      },
+      {
+        "name": "The Single Weight Rule",
+        "body": "Young Serif has one weight, and it is never faked bold. Hierarchy is size, measure and space alone; headings track tight (-0.012 to -0.025em) and balance their lines.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "UI labels, captions and metadata are sentence case at normal tracking. The only capitals with open letterspacing are the place name and time zone set on the postmark's arcs, because that is what a postmark is.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Sheet Rule",
+        "body": "Only the letter sheet casts a shadow. Cards, panels, buttons and menus on the sheet stay flat and use a hairline border instead.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep every page on the one paper sheet over the envelope ground, with the footer outside it.",
+      "**Do** draw structure with 1px ink hairlines (15% for structure, 20% for interactive outlines) before reaching for a box.",
+      "**Do** put section headings in the left margin column (1fr to 2fr, sticky from md) when a section has a heading and a body.",
+      "**Do** set headings, figures and the name in Young Serif at its single weight, and everything else in Schibsted Grotesk.",
+      "**Do** keep readable secondary text at ink 70% or stronger.",
+      "**Do** use a postmark-red 2px outline, offset 2 to 3px, for every focus-visible state.",
+      "**Do** gate the postmark stamp behind reduced-motion preferences and keep all other motion to colour, underline and 2px translations on the soft ease (cubic-bezier(0.22, 1, 0.36, 1)).",
+      "**Do** end pages with the signed close."
+    ],
+    "donts": [
+      "**Don't** put a shadow on anything but the sheet: no card shadows, no floating or translucent glass header.",
+      "**Don't** use postmark red for text, buttons, headings or fills; it is the stamp, focus and 6px markers only.",
+      "**Don't** fake a bold Young Serif or introduce a second display face.",
+      "**Don't** add uppercase, letterspaced kicker or eyebrow labels above headings.",
+      "**Don't** nest cards inside cards; a panel is one hairline block.",
+      "**Don't** add a second ink colour or a neutral grey for text; lighten the ink with alpha instead.",
+      "**Don't** reshape the MK monogram; only its colour follows the palette."
+    ]
+  }
+}

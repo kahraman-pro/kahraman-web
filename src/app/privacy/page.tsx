@@ -10,8 +10,8 @@ export const metadata: Metadata = pageMetadata({
   path: "/privacy",
 });
 
-const h2 = "mb-3 mt-12 border-t border-ink/10 pt-8 text-2xl font-semibold tracking-[-0.03em]";
-const p = "leading-[1.75] text-ink/75";
+const h2 = "mb-3 mt-12 border-t border-ink/15 pt-8 font-serif text-[1.6rem] font-normal tracking-[-0.015em]";
+const p = "leading-[1.75] text-ink/80";
 
 export default function Privacy() {
   return (

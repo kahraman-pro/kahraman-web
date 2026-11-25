@@ -55,16 +55,16 @@ export async function AppLegalPage({ doc, params }: { doc: LegalDoc } & AppParam
           <span className="text-ink">{title}</span>
         </div>
         <h1 className={h1Page}>{title}.</h1>
-        <p className="mt-4 text-[0.9rem] text-ink/60">{app.name} · Last updated: {formatDate(app.updated)}</p>
+        <p className="mt-4 text-[0.9rem] text-ink/75">{app.name} · Last updated: {formatDate(app.updated)}</p>
 
-        <nav aria-label={`${app.name} documents`} className="mt-8 inline-flex flex-wrap gap-1 rounded-xl border border-ink/10 bg-paper p-1 shadow-card">
+        <nav aria-label={`${app.name} documents`} className="mt-8 inline-flex flex-wrap gap-1 rounded-[10px] border border-ink/15 p-1">
           {(Object.keys(APP_LEGAL_DOCS) as LegalDoc[]).map((key) => (
             <Link
               key={key}
               href={`/${key}/${app.repo}`}
               aria-current={key === doc ? "page" : undefined}
-              className={`cursor-pointer rounded-[9px] px-3.5 py-1.5 text-[0.85rem] transition-colors ${
-                key === doc ? "bg-ink text-paper" : "text-ink/70 hover:bg-band-soft hover:text-ink"
+              className={`cursor-pointer rounded-[7px] px-3.5 py-1.5 text-[0.875rem] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stamp ${
+                key === doc ? "bg-ink text-paper" : "text-ink/75 hover:bg-wash hover:text-ink"
               }`}
             >
               {APP_LEGAL_DOCS[key].title}
@@ -74,18 +74,18 @@ export async function AppLegalPage({ doc, params }: { doc: LegalDoc } & AppParam
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[260px_1fr] lg:gap-16">
           <aside className="hidden lg:block">
-            <ol className="sticky top-24 flex flex-col gap-2 border-t border-ink/10 pt-4">
+            <ol className="sticky top-24 flex flex-col gap-2 border-t border-ink/15 pt-4">
               {sections.map((s, i) => (
                 <li key={s.heading}>
-                  <a href={`#s-${i}`} className="block cursor-pointer py-0.5 text-[0.85rem] text-ink/60 transition-colors hover:text-accent">{s.heading}</a>
+                  <a href={`#s-${i}`} className="block cursor-pointer py-0.5 text-[0.875rem] text-ink/75 transition-colors hover:text-ink">{s.heading}</a>
                 </li>
               ))}
             </ol>
           </aside>
-          <div className="border-t border-ink/10">
+          <div className="border-t border-ink/15">
             {sections.map(({ heading, body }, i) => (
-              <section key={heading} id={`s-${i}`} className="scroll-mt-24 border-b border-ink/10 py-8">
-                <h2 className="mb-4 text-[1.35rem] font-semibold leading-[1.3] tracking-[-0.02em]">{heading}</h2>
+              <section key={heading} id={`s-${i}`} className="scroll-mt-24 border-b border-ink/15 py-8">
+                <h2 className="mb-4 font-serif text-[1.45rem] font-normal leading-[1.3] tracking-[-0.012em]">{heading}</h2>
                 <Markdown content={body} />
               </section>
             ))}

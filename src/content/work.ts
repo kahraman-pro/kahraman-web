@@ -72,7 +72,7 @@ export const projects: Project[] = [
     approach:
       "I worked across the whole system, from backend services to the frontend customers see. I built data services that keep the information of 50K+ products in sync across every sales and ad channel, integrated 15+ third-party APIs for marketplaces, tracking, analytics and marketing tools, and built a message template system that 15 brands used to run email and SMS campaigns on their own. I also worked on moving 8 legacy brand sites to a microservice-based architecture with a new component-based frontend. I owned tasks from start to finish, reviewed code and shipped through CI/CD pipelines, working with product managers, designers and brand teams.",
     outcome:
-      "Product data now moves on its own, with about 60% less manual work. Marketing teams follow sales and campaigns in real time and launch campaign messages without a developer. On one store, rendering and Core Web Vitals work took LCP from 3.8 s to 1.5 s and the mobile Lighthouse score from 52 to 86.",
+      "Product data now moves on its own, with about 60% less manual work. Marketing teams follow sales and campaigns in real time and launch campaign messages without a developer. Across the brand stores I worked on, rendering and Core Web Vitals work took LCP from 3.8 s to 1.5 s and the mobile Lighthouse score from 52 to 86.",
     markers: ["15 BRANDS, 3M MONTHLY VISITS", "8 SITES MOVED TO MICROSERVICES", "LCP 3.8 S → 1.5 S"],
     facts: [
       { label: "Years", value: "2023 to 2026" },

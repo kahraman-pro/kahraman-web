@@ -49,7 +49,7 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
         <button
           type="button"
           onClick={() => setIndex(0)}
-          className="block w-full cursor-zoom-in overflow-hidden rounded-[20px] border border-ink/10 bg-ink shadow-card"
+          className="block w-full cursor-zoom-in overflow-hidden rounded-[8px] border border-ink/15 bg-ink focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-stamp"
           aria-label={`Open image: ${cover.alt}`}
         >
           <Image src={cover.src} alt={cover.alt} width={1920} height={1200} priority sizes="(max-width: 1260px) 100vw, 1180px" className="h-auto w-full" />
@@ -59,11 +59,11 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
       {showGallery && images.length > 0 && (
         <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-5">
           {images.map((img, i) => (
-            <figure key={img.src} className="m-0 rounded-[18px] bg-band p-2 sm:p-2.5">
+            <figure key={img.src} className="m-0 rounded-[8px] bg-wash p-2 sm:p-2.5">
               <button
                 type="button"
                 onClick={() => setIndex(i + offset)}
-                className="block w-full cursor-zoom-in overflow-hidden rounded-[11px]"
+                className="block w-full cursor-zoom-in overflow-hidden rounded-[5px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stamp"
                 aria-label={`Open image: ${img.alt}`}
               >
                 <Image
@@ -75,7 +75,7 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
                   className="h-auto w-full transition-transform duration-500 ease-soft hover:scale-[1.03]"
                 />
               </button>
-              <figcaption className="px-1 pb-0.5 pt-2.5 text-[0.78rem] leading-[1.45] text-ink/70">{img.alt}</figcaption>
+              <figcaption className="px-1 pb-0.5 pt-2.5 text-[0.8rem] leading-[1.45] text-ink/75">{img.alt}</figcaption>
             </figure>
           ))}
         </div>
@@ -86,7 +86,7 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
           role="dialog"
           aria-modal="true"
           aria-label={current.alt}
-          className="fixed inset-0 z-[100] flex cursor-zoom-out flex-col bg-ink/95 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex cursor-zoom-out flex-col bg-ink/[0.97]"
           onClick={close}
           onTouchStart={(e) => setTouchX(e.touches[0].clientX)}
           onTouchEnd={(e) => {
@@ -96,13 +96,13 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
             setTouchX(null);
           }}
         >
-          <div className="flex items-center justify-between px-4 py-3 text-sm text-bg/70 sm:px-6">
+          <div className="flex items-center justify-between px-4 py-3 text-sm text-paper/70 sm:px-6">
             <span className="tabular-nums">{index + 1} / {all.length}</span>
             <button
               type="button"
               onClick={close}
               autoFocus
-              className="cursor-pointer rounded-[10px] border border-bg/25 px-4 py-1.5 font-medium text-bg transition-colors hover:bg-bg/10"
+              className="cursor-pointer rounded-[10px] border border-paper/25 px-4 py-1.5 font-medium text-paper transition-colors hover:bg-paper/10"
             >
               Close
             </button>
@@ -117,7 +117,7 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
                   type="button"
                   aria-label="Previous image"
                   onClick={(e) => { e.stopPropagation(); step(-1); }}
-                  className="absolute left-3 top-1/2 hidden cursor-pointer size-11 -translate-y-1/2 items-center justify-center rounded-full border border-bg/25 text-xl text-bg transition-colors hover:bg-bg/10 sm:flex"
+                  className="absolute left-3 top-1/2 hidden cursor-pointer size-11 -translate-y-1/2 items-center justify-center rounded-full border border-paper/25 text-xl text-paper transition-colors hover:bg-paper/10 sm:flex"
                 >
                   <ArrowLeft className="size-5" />
                 </button>
@@ -125,16 +125,16 @@ export function ProjectMedia({ images, cover, showGallery, hideCover = false }: 
                   type="button"
                   aria-label="Next image"
                   onClick={(e) => { e.stopPropagation(); step(1); }}
-                  className="absolute right-3 top-1/2 hidden cursor-pointer size-11 -translate-y-1/2 items-center justify-center rounded-full border border-bg/25 text-xl text-bg transition-colors hover:bg-bg/10 sm:flex"
+                  className="absolute right-3 top-1/2 hidden cursor-pointer size-11 -translate-y-1/2 items-center justify-center rounded-full border border-paper/25 text-xl text-paper transition-colors hover:bg-paper/10 sm:flex"
                 >
                   <ArrowRight className="size-5" />
                 </button>
               </>
             )}
           </div>
-          <p className="px-5 pb-5 text-center text-[0.85rem] text-bg/70" onClick={(e) => e.stopPropagation()}>
+          <p className="px-5 pb-5 text-center text-[0.85rem] text-paper/70" onClick={(e) => e.stopPropagation()}>
             {current.alt}
-            <span className="mt-1 block text-[0.75rem] text-bg/40 sm:hidden">Swipe to see more</span>
+            <span className="mt-1 block text-[0.75rem] text-paper/70 sm:hidden">Swipe to see more</span>
           </p>
         </div>
       )}

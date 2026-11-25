@@ -31,11 +31,10 @@ Visitors come from search, LinkedIn, GitHub and Upwork, usually comparing severa
 
 ## Brand Commitments
 
-- Name: Mustafa Kahraman. Logo: "MK" monogram where the M's right leg is the K's stem (`src/components/Logo.tsx`, `public/brand/`).
+- Name: Mustafa Kahraman. Logo: "MK" monogram where the M's right leg is the K's stem (`src/components/Logo.tsx`, `public/brand/`). The shape stays as it is; its colour may follow the palette (user, 2026-11-26).
 - Voice: plain, direct, first person, outcome first; no hype; stack names only as supporting detail.
-- All copy stays as written (user requirement for the 2026-11 redesign).
-- Layout preference (2026-11-24): the category standard (centred hero, figures, clear sections), executed at the craft level of Linear, Vercel and Stripe. Originality comes from type, tone, component and section design, not from an unusual concept.
-- Palette and type (2026-11-24, replaces cream and mint): cool grey-green ground #f2f4f1, paper #fbfcfa, ledger-blue bands #c8d9ea (soft #e2ebf4), navy ink #14213d, bordo accent #7a1f2e for hover, focus and small markers. Font: Onest. Layout and copy unchanged. Theme variables live in `src/app/globals.css` (`bg`, `paper`, `band`, `band-soft`, `ink`, `accent`).
+- Copy stays verbatim; layout, section order and grouping are free (user, 2026-11-26 redesign). Ask before rewording.
+- Visual direction (2026-11-26): "Antetli Mektup", the site as a letter from one person (letterhead, direct address, plain figures, a signed close), chosen by the user over five other directions. It must never read as an agency or corporate template. Origin in İzmir shows as one subtle detail, never a tourist motif. Visual tokens live in DESIGN.md.
 
 ## Evidence on Hand
 

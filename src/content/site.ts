@@ -89,8 +89,8 @@ export const principles = [
 export const results = [
   {
     value: "3.8 s → 0.5 s",
-    text: "Largest Contentful Paint on a retail brand's store, after rendering and Core Web Vitals work. Mobile Lighthouse went from 52 to 95.",
-    who: "Retail ecommerce, Istanbul",
+    text: "Largest Contentful Paint across the brand stores I worked on, after rendering and Core Web Vitals work. Mobile Lighthouse went from 52 to 95.",
+    who: "Retail brand stores, Istanbul",
   },
   {
     value: "8 sites",
@@ -99,7 +99,7 @@ export const results = [
   },
   {
     value: "1 person",
-    text: "SetupBook, from idea to live product: AI coach, 16 platform integrations, payments and 9 languages and designed .",
+    text: "SetupBook, from idea to live product: AI coach, 16 platform integrations, payments and 9 languages, designed and built alone.",
     who: "SetupBook, live at setupbook.io",
   },
 ];

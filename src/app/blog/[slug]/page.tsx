@@ -5,7 +5,7 @@ import { Contact } from "@/components/Contact";
 import { formatDate, getPost, posts } from "@/content/blog";
 import { site } from "@/content/site";
 import { absoluteUrl, breadcrumbLd, jsonLd, pageMetadata } from "@/lib/seo";
-import { crumbs, h1Page, linkUnderline, pageHero, wrap } from "@/lib/ui";
+import { body, crumbs, h1Page, linkUnderline, narrow, pageHero } from "@/lib/ui";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -45,28 +45,28 @@ export default async function PostPage({ params }: Params) {
   return (
     <>
       <section className={pageHero}>
-        <div className={wrap}>
+        <div className={narrow}>
           <div className={crumbs}>
             <Link className="cursor-pointer" href="/">Home</Link><span aria-hidden="true" className="text-ink/30">/</span><Link className="cursor-pointer" href="/blog">Blog</Link>
           </div>
           <h1 className={`${h1Page} max-w-[18ch]`}>{p.title}</h1>
-          <p className="mt-6 text-[0.9rem] text-ink/60">
+          <p className="mt-6 text-[0.95rem] text-ink/75">
             <time dateTime={p.date}>{formatDate(p.date)}</time> · {site.name}
           </p>
         </div>
       </section>
 
       <article className="pb-16 md:pb-24">
-        <div className={`${wrap} max-w-[760px] text-[1.05rem] leading-[1.75] text-ink/75 md:text-[1.1rem]`}>
+        <div className={`${narrow} ${body}`}>
           {p.body.map((b, i) =>
             b.type === "p" ? (
               <p key={i} className="mb-6">{b.text}</p>
             ) : (
-              <ul key={i} className="mb-6 border-t border-ink/10">
+              <ul key={i} className="mb-6 list-none border-t border-ink/15 p-0">
                 {b.items.map((it) => (
-                  <li key={it.title} className="border-b border-ink/10 py-4">
-                    <Link className={`${linkUnderline} font-semibold text-ink`} href={it.href}>{it.title}</Link>
-                    <span className="block text-ink/65">{it.text}</span>
+                  <li key={it.title} className="border-b border-ink/15 py-4">
+                    <Link className={`${linkUnderline} font-serif text-[1.15rem] text-ink`} href={it.href}>{it.title}</Link>
+                    <span className="mt-1 block text-ink/75">{it.text}</span>
                   </li>
                 ))}
               </ul>

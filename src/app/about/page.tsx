@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Contact } from "@/components/Contact";
 import { site } from "@/content/site";
 import { pageMetadata } from "@/lib/seo";
-import { crumbs, h1Page, lede, linkUnderline, pageHero, section, wrap } from "@/lib/ui";
+import { body, crumbs, h1Page, lede, linkUnderline, narrow, pageHero, section } from "@/lib/ui";
 
 export const metadata: Metadata = pageMetadata({
   title: "About",
@@ -15,14 +15,14 @@ export default function AboutPage() {
   return (
     <>
       <section className={pageHero}>
-        <div className={wrap}>
+        <div className={narrow}>
           <div className={crumbs}><Link className="cursor-pointer" href="/">Home</Link><span aria-hidden="true" className="text-ink/30">/</span><span className="text-ink">About</span></div>
           <h1 className={`${h1Page} max-w-[16ch]`}>Who you work with.</h1>
           <p className={`${lede} mt-6 max-w-[60ch]`}>{site.role}, {site.location}. I work alone, so you talk to me directly and I do the work myself.</p>
         </div>
       </section>
       <section className={`${section} pt-0`}>
-        <div className={`${wrap} max-w-[760px] text-[1.05rem] leading-[1.75] text-ink/75 md:text-[1.1rem]`}>
+        <div className={`${narrow} ${body}`}>
           <p className="mb-4">
             I have built software professionally since 2021. At an agency in Istanbul I worked on stores, backend services,
             integrations and platform migrations for 15 retail and corporate brands, with about 3M monthly visits in total.

@@ -8,7 +8,7 @@ import { absoluteUrl, breadcrumbLd, jsonLd, pageMetadata } from "@/lib/seo";
 import { getService, services } from "@/content/services";
 import { getProject } from "@/content/work";
 import { ArrowRight } from "@/components/Icon";
-import { btnGhost, btnPrimary, card, crumbs, h1Page, h2Split, headP, lede, pageHero, section, splitHead, wrap } from "@/lib/ui";
+import { btnGhost, btnPrimary, crumbs, h1Page, h2, h2Margin, h3, headP, lede, marginGrid, marginHead, pageHero, section, wrap } from "@/lib/ui";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -22,14 +22,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return pageMetadata({ title: s.title.replace(/\.$/, ""), description: s.metaDescription, path: `/services/${s.slug}` });
 }
 
-function Cards({ items, band = false }: { items: { title: string; text: string }[]; band?: boolean }) {
+// Pains read as a ruled list; what I build sits in blotting-blue wells.
+function Items({ items, wells = false }: { items: { title: string; text: string }[]; wells?: boolean }) {
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className={`grid gap-x-10 sm:grid-cols-2 ${wells ? "gap-y-3" : "gap-y-0"}`}>
       {items.map((c) => (
-        <div key={c.title} className={band ? "rounded-[20px] bg-band p-6 sm:p-7" : `${card} p-6 sm:p-7`}>
-          <span aria-hidden="true" className={`mb-5 block h-0.5 w-8 ${band ? "bg-ink/70" : "bg-accent"}`} />
-          <h3 className="mb-2 text-[1.08rem] font-semibold leading-[1.3] tracking-[-0.02em]">{c.title}</h3>
-          <p className={`m-0 text-[0.95rem] ${band ? "text-ink/75" : "text-ink/65"}`}>{c.text}</p>
+        <div key={c.title} className={wells ? "rounded-[8px] bg-wash p-6 sm:p-7" : "border-t border-ink/15 py-6"}>
+          <h3 className={`${h3} mb-2`}>{c.title}</h3>
+          <p className="m-0 text-[1rem] leading-[1.6] text-ink/75">{c.text}</p>
         </div>
       ))}
     </div>
@@ -79,23 +79,28 @@ export default async function ServicePage({ params }: Params) {
 
       <section className={section}>
         <div className={wrap}>
-          <div className={splitHead}><h2 className={h2Split}>{s.painsTitle}</h2><p className={headP}>{s.painsLede}</p></div>
-          <Cards items={s.pains} />
+          <div className={marginGrid}>
+            <div className={marginHead}><h2 className={h2Margin}>{s.painsTitle}</h2><p className={`${headP} mt-5`}>{s.painsLede}</p></div>
+            <Items items={s.pains} />
+          </div>
         </div>
       </section>
 
       <section className={section}>
         <div className={wrap}>
-          <div className={splitHead}><h2 className={h2Split}>What I build.</h2><p className={headP}>{s.buildsLede}</p></div>
-          <Cards items={s.builds} band />
+          <div className={marginGrid}>
+            <div className={marginHead}><h2 className={h2Margin}>What I build.</h2><p className={`${headP} mt-5`}>{s.buildsLede}</p></div>
+            <Items items={s.builds} wells />
+          </div>
         </div>
       </section>
 
       {related.length > 0 && (
         <section className={section}>
           <div className={wrap}>
-            <div className={splitHead}><h2 className={h2Split}>Where I have done it.</h2><p className={headP}>Projects I designed and built myself.</p></div>
-            <div className="grid gap-6 md:grid-cols-2">
+            <h2 className={h2}>Where I have done it.</h2>
+            <p className={`${headP} mt-5`}>Projects I designed and built myself.</p>
+            <div className="mt-10 grid gap-6 md:mt-12 md:grid-cols-2">
               {related.map((p) => <WorkCard key={p.slug} p={p} />)}
             </div>
           </div>

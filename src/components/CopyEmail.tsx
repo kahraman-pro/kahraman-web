@@ -18,14 +18,14 @@ export function CopyEmail({ email }: { email: string }) {
   };
 
   return (
-    <span className="inline-flex h-12 items-center gap-1 rounded-xl border border-ink/12 bg-paper/70 pl-4 pr-1.5">
-      <a href={`mailto:${email}`} className="cursor-pointer pr-2 font-medium transition-colors hover:text-accent">{email}</a>
+    <span className="inline-flex h-12 items-center gap-1 rounded-[10px] border border-ink/20 pl-4 pr-1.5">
+      <a href={`mailto:${email}`} className="cursor-pointer pr-2 font-medium underline decoration-ink/25 underline-offset-[0.22em] transition-[text-decoration-color] hover:decoration-ink">{email}</a>
       <button
         type="button"
         onClick={copy}
         aria-live="polite"
-        className={`h-9 cursor-pointer rounded-[9px] px-3 text-[0.8rem] font-medium transition-colors ${
-          label === "Copied" ? "bg-accent text-paper" : "bg-ink/5 text-ink/75 hover:bg-ink/10 hover:text-ink"
+        className={`h-9 min-w-[4.25rem] cursor-pointer rounded-[7px] px-3 text-[0.85rem] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stamp ${
+          label === "Copied" ? "bg-ink text-paper" : "bg-wash text-ink/80 hover:bg-ink/10 hover:text-ink"
         }`}
       >
         {label}

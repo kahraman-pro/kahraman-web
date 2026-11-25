@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Onest } from "next/font/google";
+import { Schibsted_Grotesk, Young_Serif } from "next/font/google";
 import { Header } from "@/components/Header";
 import { WebMcp } from "@/components/WebMcp";
 import { Footer } from "@/components/Footer";
@@ -8,7 +8,8 @@ import { env } from "@/lib/env";
 import { jsonLd } from "@/lib/seo";
 import "./globals.css";
 
-const sans = Onest({ subsets: ["latin", "latin-ext"], variable: "--font-onest", display: "swap" });
+const sans = Schibsted_Grotesk({ subsets: ["latin", "latin-ext"], variable: "--font-schibsted", display: "swap" });
+const serif = Young_Serif({ weight: "400", subsets: ["latin", "latin-ext"], variable: "--font-young-serif", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f2f4f1",
+  themeColor: "#eceff3",
   colorScheme: "light",
 };
 
@@ -114,16 +115,21 @@ const graph = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} scroll-smooth scroll-pt-24 motion-reduce:scroll-auto [scrollbar-color:rgb(20_33_61/0.25)_transparent]`}>
-      <body className="overflow-x-clip bg-bg font-sans text-base leading-[1.6] text-ink caret-accent antialiased selection:bg-band selection:text-ink">
+    <html lang="en" className={`${sans.variable} ${serif.variable} scroll-smooth scroll-pt-24 motion-reduce:scroll-auto [scrollbar-color:rgb(28_47_110/0.3)_transparent]`}>
+      <body className="overflow-x-clip bg-envelope font-sans text-base leading-[1.6] text-ink caret-stamp antialiased selection:bg-ink selection:text-paper">
         <a
           href="#main"
-          className="absolute -left-[999px] top-0 z-[200] rounded-xl bg-ink px-4 py-2 text-paper focus:left-4 focus:top-3"
+          className="absolute -left-[999px] top-0 z-[200] rounded-[10px] bg-ink px-4 py-2 text-paper focus:left-4 focus:top-3"
         >
           Skip to content
         </a>
-        <Header />
-        <main id="main">{children}</main>
+        {/* The letter: one sheet on the envelope ground. The footer sits outside it. */}
+        <div className="mx-auto w-full max-w-[1296px] px-2 pt-2 sm:px-4 sm:pt-4 lg:px-6 lg:pt-7">
+          <div className="rounded-[6px] bg-paper shadow-sheet">
+            <Header />
+            <main id="main">{children}</main>
+          </div>
+        </div>
         <Footer />
         <WebMcp />
         <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(graph)} />

@@ -9,7 +9,7 @@ import { btnGhost, crumbs, h1Page, pageHero, wrap } from "@/lib/ui";
 import { jsonLd, pageMetadata } from "@/lib/seo";
 
 // The privacy policy, terms, account deletion and support pages of each mobile app, at
-// /<doc>/<GitHub repo name> (e.g. /privacy/simple-note-flutter). The App Store, Google Play and the
+// /<doc>/<GitHub repo name> (e.g. /privacy/chart-ai-flutter). The App Store, Google Play and the
 // apps themselves link to these URLs, so each one is a real, server-rendered page that names its app.
 
 export type AppParams = { params: Promise<{ app: string }> };

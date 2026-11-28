@@ -9,7 +9,7 @@ import { crumbs, h1Page, lede, pageHero, wrap } from "@/lib/ui";
 export const metadata: Metadata = pageMetadata({
   title: "My Work: Software and AI Projects",
   description:
-    "Projects by Mustafa Kahraman: SetupBook with its AI coach, software for 15 retail brands, Market Hours, Passport.AI, Simple Note and Vocabulary.",
+    "Projects by Mustafa Kahraman: SetupBook with its AI coach, software for 15 retail brands, Market Hours, PreChart, Passport.AI and Vocabulary.",
   path: "/work",
 });
 

@@ -10,6 +10,6 @@ export const STORE_LINKS: Record<string, StoreLinks> = {
   },
   "market-hours": { appStore: "", googlePlay: "" },
   "passport-ai": { appStore: "", googlePlay: "" },
-  "simple-note": { appStore: "", googlePlay: "" },
+  prechart: { appStore: "", googlePlay: "" },
   "english-vocabulary": { appStore: "", googlePlay: "" },
 };

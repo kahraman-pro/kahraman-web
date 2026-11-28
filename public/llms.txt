@@ -13,8 +13,8 @@
 - [SetupBook](https://kahraman.pro/work/setupbook): live trading journal with an AI coach (Gemini API), 16 broker integrations, payments and 9 languages. Built solo.
 - [Software for retail brands](https://kahraman.pro/work/retail-ecommerce): stores, backend services, 15+ API integrations and migration of 8 sites to microservices for 15 brands, about 3M monthly visits.
 - [Market Hours](https://kahraman.pro/work/market-hours): live world map of open stock exchanges and forex sessions, with alarms.
+- [PreChart](https://kahraman.pro/work/prechart): AI chart analysis drawn on top of your own chart screenshot, with the price axis calibrated on the phone.
 - [Passport.AI](https://kahraman.pro/work/passport-ai): ID and passport photo app with on-device face checks and AI retouching.
-- [Simple Note](https://kahraman.pro/work/simple-note): offline-first note app for iOS, Android and web.
 - [Vocabulary](https://kahraman.pro/work/english-vocabulary): spaced-repetition English vocabulary app in 24 languages.
 
 ## Blog

@@ -1,9 +1,9 @@
 import type { App, LegalDoc } from './shared';
+import chartAi from './chart-ai-flutter';
 import englishVocabulary from './english-vocabulary-words-flutter';
 import marketHours from './market-hours-forex-stocks-flutter';
 import passportIdPhoto from './passport-id-photo-flutter';
 import setupbook from './setupbook-reactnative';
-import simpleNote from './simple-note-flutter';
 
 // The documents every mobile app gets, keyed by their URL segment: /<doc>/<repo>.
 export const APP_LEGAL_DOCS: Record<LegalDoc, { title: string; description: (name: string) => string }> = {
@@ -14,7 +14,7 @@ export const APP_LEGAL_DOCS: Record<LegalDoc, { title: string; description: (nam
 };
 
 // One entry per app, named after its GitHub repository.
-export const APPS: App[] = [englishVocabulary, marketHours, simpleNote, passportIdPhoto, setupbook];
+export const APPS: App[] = [englishVocabulary, marketHours, chartAi, passportIdPhoto, setupbook];
 
 export const findApp = (repo: string) => APPS.find((app) => app.repo === repo);
 

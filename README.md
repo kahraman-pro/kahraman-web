@@ -51,7 +51,7 @@ I work alone, so you talk to me directly and I do the work myself. No account ma
 | [**Software for retail brands**](https://kahraman.pro/work/retail-ecommerce) | Stores, backend services, 15+ integrations and a move of 8 sites to microservices. LCP from 3.8 s to 1.5 s, mobile Lighthouse from 52 to 86. |
 | [**Market Hours**](https://kahraman.pro/work/market-hours) | A live world map of open stock exchanges and forex sessions, with holidays and alarms. [markethours.live](https://markethours.live) |
 | [**Passport.AI**](https://kahraman.pro/work/passport-ai) | An ID and passport photo app with on-device face checks and AI retouching, for 250 countries. |
-| [**Simple Note**](https://kahraman.pro/work/simple-note) | An offline-first note app that feels like paper, on iOS, Android and the web. |
+| [**PreChart**](https://kahraman.pro/work/prechart) | A chart-analysis app that draws support, resistance, zones and scenarios on top of your own chart screenshot, with the price axis calibrated on the phone. |
 | [**Vocabulary**](https://kahraman.pro/work/english-vocabulary) | A swipe-card app for English words with audio, 17 games and spaced repetition in 24 languages. |
 
 ---

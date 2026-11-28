@@ -38,7 +38,7 @@ Visitors come from search, LinkedIn, GitHub and Upwork, usually comparing severa
 
 ## Evidence on Hand
 
-- Case studies with screenshots: SetupBook, retail ecommerce work, Market Hours, Passport.AI, Simple Note, Vocabulary (`src/content/work.ts`, `public/work/`).
+- Case studies with screenshots: SetupBook, retail ecommerce work, Market Hours, PreChart, Passport.AI, Vocabulary (`src/content/work.ts`, `public/work/`).
 - Real numbers: 3M monthly visits, 50K+ products synced, 1M+ members, $20K+ daily sales, LCP 3.8 s to 0.5 s, 8 sites migrated.
 - Brand names worked for (New Balance, Vitra, Arçelik, İpekyol, ...). Portrait photo `public/brand/mustafa-kahraman.webp`.
 - No testimonials, no client logos files, no pricing: do not invent them.
